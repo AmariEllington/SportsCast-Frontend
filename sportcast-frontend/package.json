@@ -8,6 +8,7 @@
     "react-beautiful-dnd": "^11.0.4",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
+    "react-spotify-player": "^1.0.4",
     "react-twitter-embed": "^2.0.8",
     "react-youtube": "^7.9.0",
     "styled-components": "^4.3.2"

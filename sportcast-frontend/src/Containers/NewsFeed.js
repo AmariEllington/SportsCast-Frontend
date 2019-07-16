@@ -24,7 +24,7 @@ export default class NewsFeed extends Component {
     const { newsStories } = this.state;
 
     return (
-      <div className="newsfeed">
+      <div className="newsfeed card">
         {newsStories.map((news, index) => (
           <News key={news.id} news={news} index={index} />
         ))}

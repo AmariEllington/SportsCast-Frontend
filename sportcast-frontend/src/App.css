@@ -31,3 +31,65 @@
     transform: rotate(360deg);
   }
 }
+
+.appContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+}
+
+.card {
+  height: 50%;
+  width: 25%;
+}
+
+.newsfeed {
+  order: 0;
+  flex: 2 1 auto;
+  align-self: flex-start;
+  display: block;
+  height: 80vh;
+  overflow: auto;
+}
+
+.news img {
+  object-fit: cover;
+  width: 100%;
+  height: 7%;
+}
+
+.news {
+  border-radius: 1px solid black;
+  overflow: auto;
+}
+
+.twitter {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: stretch;
+  display: block;
+  height: 80vh;
+  overflow: auto;
+}
+
+.youtube {
+  order: 0;
+  flex: 2 1 auto;
+  align-self: auto;
+}
+
+.spotify {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+  display: grid;
+  float: right;
+  align-self: baseline;
+}
+
+.menuTitle {
+  text-align: center;
+}

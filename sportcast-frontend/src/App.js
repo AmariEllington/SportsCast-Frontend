@@ -1,21 +1,20 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import ReactDOM from "react-dom";
 import "./App.css";
-import "./index.css";
-import NewsFeed from "./Containers/NewsFeed";
-import Twitter from "./Containers/Twitter";
-import Youtube from "./Containers/Youtube";
-import Spotify from "./Containers/Spotify";
-import { DragDropContext } from "react-beautiful-dnd";
+
+import LandingPage from "./Pages/LandingPage";
+import ContentPage from "./Pages/ContentPage";
 
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <Spotify />
-        <Youtube />
-        <Twitter />
-        <NewsFeed />
-      </div>
+      <Router>
+        <div>
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/content" component={ContentPage} />
+        </div>
+      </Router>
     );
   }
 }

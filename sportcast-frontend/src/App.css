@@ -42,7 +42,7 @@
 }
 
 .card {
-  height: 50%;
+  height: 40%;
   width: 25%;
 }
 
@@ -51,7 +51,7 @@
   flex: 2 1 auto;
   align-self: flex-start;
   display: block;
-  height: 80vh;
+  height: 60vh;
   overflow: auto;
 }
 
@@ -71,7 +71,7 @@
   flex: 1 1 auto;
   align-self: stretch;
   display: block;
-  height: 80vh;
+  height: 60vh;
   overflow: auto;
 }
 

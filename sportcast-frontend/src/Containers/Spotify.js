@@ -13,7 +13,7 @@ export default class Spotify extends Component {
     return (
       <div className="spotify">
         <SpotifyPlayer
-          uri="spotify:album:1TIUsv8qmYLpBEhvmBmyBk"
+          uri="spotify:show:2NqEBd6EJNfs6A3527xwVD"
           view={view}
           theme={theme}
         />

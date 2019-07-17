@@ -9,6 +9,8 @@ const UKURL = `https://newsapi.org/v2/top-headlines?country=gb&category=sports&a
 const USAURL = `https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=a445e20ba5484749b0fa9b70ac35f421`;
 const BRAZILURL = `https://newsapi.org/v2/top-headlines?country=br&category=sports&apiKey=a445e20ba5484749b0fa9b70ac35f421`;
 const FRANCEURL = `https://newsapi.org/v2/top-headlines?country=fr&category=sports&apiKey=a445e20ba5484749b0fa9b70ac35f421`;
+const CANADAURL = `https://newsapi.org/v2/top-headlines?country=ca&category=sports&apiKey=a445e20ba5484749b0fa9b70ac35f421`;
+const PORTUGALURL = `https://newsapi.org/v2/top-headlines?country=pt&category=sports&apiKey=a445e20ba5484749b0fa9b70ac35f421`;
 
 export default class NewsFeed extends Component {
   state = {
@@ -25,7 +27,7 @@ export default class NewsFeed extends Component {
       );
   }
 
-  handleClickUSA = () => {
+  handleClickUK = () => {
     fetch(UKURL)
       .then(data => data.json())
       .then(data =>
@@ -65,6 +67,26 @@ export default class NewsFeed extends Component {
       );
   };
 
+  handleClickCanada = () => {
+    fetch(CANADAURL)
+      .then(data => data.json())
+      .then(data =>
+        this.setState({
+          newsStories: data.articles
+        })
+      );
+  };
+
+  handleClickPortugal = () => {
+    fetch(PORTUGALURL)
+      .then(data => data.json())
+      .then(data =>
+        this.setState({
+          newsStories: data.articles
+        })
+      );
+  };
+
   render() {
     const { newsStories } = this.state;
 
@@ -77,11 +99,17 @@ export default class NewsFeed extends Component {
           <button class="ui button" onClick={this.handleClickUSA}>
             USA
           </button>
+          <button class="ui button" onClick={this.handleClickCanada}>
+            Canada
+          </button>
           <button class="ui button" onClick={this.handleClickBrazil}>
             Brazil
           </button>
           <button class="ui button" onClick={this.handleClickFrance}>
             France
+          </button>
+          <button class="ui button" onClick={this.handleClickPortugal}>
+            Portugal
           </button>
         </div>
         {newsStories.map((news, index) => (

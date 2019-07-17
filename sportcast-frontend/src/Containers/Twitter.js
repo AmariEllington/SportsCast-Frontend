@@ -3,24 +3,27 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 export default class Twitter extends Component {
   state = {
-    input: ""
+    input: "espn"
   };
 
   handleClick = event => {
     event.preventDefault();
     this.setState({
-      input: event.target.formInput.value
+      input: event.target.value
     });
-    console.log(event.target.formInput.value);
+    console.log(event.target.value);
   };
   render() {
     return (
       <div className="twitter card">
-        <form onSubmit={this.handleClick}>
-          <input type="text" name="formInput" />
+        <form>
+          <input type="text" name="formInput" onChange={this.handleClick} />
           <input type="submit" value="submit" />
         </form>
-        <TwitterTimelineEmbed sourceType="profile" screenName="espn" />
+        <TwitterTimelineEmbed
+          sourceType="profile"
+          screenName={this.state.input}
+        />
       </div>
     );
   }

@@ -28,7 +28,6 @@ export default class MenuExampleInvertedSegment extends Component {
             onClick={this.handleItemClick}
           />
         </Menu>
-        <h1 className="menuTitle">SportsCast</h1>
       </Segment>
     );
   }

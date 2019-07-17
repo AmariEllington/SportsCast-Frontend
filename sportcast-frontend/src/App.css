@@ -41,6 +41,11 @@
   align-items: flex-start;
 }
 
+body {
+  height: 100%;
+  width: 100%;
+}
+
 .card {
   height: 40%;
   width: 25%;
@@ -92,4 +97,35 @@
 
 .menuTitle {
   text-align: center;
+}
+
+.sportsTicker {
+  width: 100%;
+}
+
+.landingPage {
+  background-color: #f20b0f;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleLandingPage {
+  justify-content: center;
+  color: aliceblue;
+  font-family: rockwell;
+  font-size: 10em;
+  font-weight: bold;
+  align-self: baseline;
+}
+
+.subheadingTitlePage {
+  text-align: center;
+  justify-content: center;
+  color: aliceblue;
+  font-family: rockwell;
+  font-size: 5em;
+  align-self: baseline;
 }

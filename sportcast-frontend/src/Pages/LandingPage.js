@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Login from "../Pages/LoginComponent";
 export default class LandingPage extends Component {
   render() {
     return (

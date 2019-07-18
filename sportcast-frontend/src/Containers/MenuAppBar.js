@@ -17,16 +17,16 @@ export default class MenuExampleInvertedSegment extends Component {
             active={activeItem === "home"}
             onClick={this.handleItemClick}
           />
-          <Menu.Item
-            name="messages"
-            active={activeItem === "messages"}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="friends"
-            active={activeItem === "friends"}
-            onClick={this.handleItemClick}
-          />
+          <div
+            class="ui animated button"
+            tabindex="0"
+            onClick={this.props.handleLogOut}
+          >
+            <div class="visible content">Logout</div>
+            <div class="hidden content">
+              <i class="hand peace icon" />
+            </div>
+          </div>
         </Menu>
       </Segment>
     );

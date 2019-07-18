@@ -9,18 +9,20 @@ export default class Twitter extends Component {
   handleClick = event => {
     event.preventDefault();
     this.setState({
-      input: event.target.value
+      input: event.target.formInput.value
     });
-    console.log(event.target.value);
+    console.log(event.target.formInput.value);
+    console.log(this.state.input);
   };
   render() {
     return (
       <div className="twitter card">
-        <form>
-          <input type="text" name="formInput" onChange={this.handleClick} />
+        <form onSubmit={this.handleClick}>
+          <input type="text" name="formInput" />
           <input type="submit" value="submit" />
         </form>
         <TwitterTimelineEmbed
+          key={this.state.input}
           sourceType="profile"
           screenName={this.state.input}
         />

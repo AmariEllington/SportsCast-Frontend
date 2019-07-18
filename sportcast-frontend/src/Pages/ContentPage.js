@@ -15,11 +15,22 @@ export default class ContentPage extends Component {
           <MenuAppBar handleLogOut={this.props.handleLogOut} />
           <SportTicker />
         </div>
-        <div className="appContainer">
-          <NewsFeed />
-          <Twitter />
-          <Youtube />
-          <Spotify />
+        <div class="ui grid">
+          <div class="eight wide column card">
+            <NewsFeed />
+          </div>
+
+          <div class="eight wide column card">
+            <Twitter />
+          </div>
+
+          <div class="eight wide column card">
+            <Youtube />
+          </div>
+
+          <div class="eight wide column card">
+            <Spotify />
+          </div>
         </div>
       </div>
     );

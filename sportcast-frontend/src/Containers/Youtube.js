@@ -13,7 +13,7 @@ export default class Youtube extends Component {
     };
 
     return (
-      <div className="youtube">
+      <div className="youtube grid-item">
         <YouTube videoId="7HldRlTZj_g" opts={opts} onReady={this._onReady} />
       </div>
     );

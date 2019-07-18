@@ -11,12 +11,10 @@ export default class Twitter extends Component {
     this.setState({
       input: event.target.formInput.value
     });
-    console.log(event.target.formInput.value);
-    console.log(this.state.input);
   };
   render() {
     return (
-      <div className="twitter card">
+      <div className="twitter card grid-item">
         <form onSubmit={this.handleClick}>
           <input type="text" name="formInput" />
           <input type="submit" value="submit" />

@@ -14,11 +14,12 @@ export default class Twitter extends Component {
   };
   render() {
     return (
-      <div className="twitter card grid-item">
+      <div className="card card-item">
         <form onSubmit={this.handleClick}>
           <input type="text" name="formInput" />
           <input type="submit" value="submit" />
         </form>
+
         <TwitterTimelineEmbed
           key={this.state.input}
           sourceType="profile"

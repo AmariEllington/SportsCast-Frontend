@@ -91,7 +91,7 @@ export default class NewsFeed extends Component {
     const { newsStories } = this.state;
 
     return (
-      <div className="newsfeed card grid-item">
+      <div className="card card-item ">
         <div class="ui buttons">
           <button class="ui button" onClick={this.handleClickUK}>
             UK

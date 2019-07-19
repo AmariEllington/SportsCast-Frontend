@@ -21,7 +21,7 @@ export default class Spotify extends Component {
     // );
 
     return (
-      <div className="grid-item">
+      <div className="card-item">
         <iframe
           src="https://www.mixcloud.com/widget/iframe/?light=1&feed=%2Fguardianfootballweekly%2F"
           frameborder="0"

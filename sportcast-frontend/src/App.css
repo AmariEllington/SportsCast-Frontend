@@ -77,14 +77,14 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.news img {
+.newsCard img {
   object-fit: cover;
-  width: 100%;
+  width: 50%;
   height: 7%;
 }
 
-.news {
-  border-radius: 1px solid black;
+.newsCard {
+  border: 1px solid black;
   overflow: auto;
 }
 
@@ -184,4 +184,14 @@ body {
 
 .list-group-item:hover {
   background-color: #eee;
+}
+
+.loginButton {
+  text-align: center;
+  width: 30%;
+}
+
+.twitterMenuItem {
+  overflow: auto;
+  background-color: #282c34;
 }

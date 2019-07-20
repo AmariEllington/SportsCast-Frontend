@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
+import TwitterMenu from "../Components/TwitterMenu";
 
 export default class Twitter extends Component {
   state = {
@@ -12,9 +13,17 @@ export default class Twitter extends Component {
       input: event.target.formInput.value
     });
   };
+
+  updateTwitterMenu = event => {
+    event.preventDefault();
+    this.setState({
+      input: event.target.value
+    });
+  };
   render() {
     return (
       <div className="card card-item">
+        <TwitterMenu updateTwitterMenu={this.updateTwitterMenu} />
         <form onSubmit={this.handleClick}>
           <input type="text" name="formInput" />
           <input type="submit" value="submit" />

@@ -6,20 +6,17 @@ export default class TwitterMenu extends Component {
       <div>
         <div class="ui inline dropdown simple item ">
           <div class="text">
-            <img class="ui avatar image" src="/images/avatar/small/jenny.jpg" />
-            Jenny Hess
+            <i class="twitter squarefoot icon" />
+            Select A Twitter Page
           </div>
           <i class="dropdown icon" />
-          <ul class="menu">
+          <div class="menu">
             <option
               class="item twitterMenuItem"
               onClick={this.props.updateTwitterMenu}
               value="afcbournemouth"
             >
-              <img
-                class="ui avatar image"
-                src="/images/avatar/small/jenny.jpg"
-              />
+              <i class="futbol icon" />
               AFC Bournemouth
             </option>
             <option
@@ -27,10 +24,7 @@ export default class TwitterMenu extends Component {
               onClick={this.props.updateTwitterMenu}
               value="Arsenal"
             >
-              <img
-                class="ui avatar image"
-                src="/images/avatar/small/elliot.jpg"
-              />
+              <i class="futbol icon" />
               Arsenal FC
             </option>
             <option
@@ -38,10 +32,7 @@ export default class TwitterMenu extends Component {
               onClick={this.props.updateTwitterMenu}
               value="AVFCOfficial"
             >
-              <img
-                class="ui avatar image"
-                src="/images/avatar/small/stevie.jpg"
-              />
+              <i class="futbol icon" />
               Aston Villa
             </option>
             <option
@@ -49,10 +40,7 @@ export default class TwitterMenu extends Component {
               onClick={this.props.updateTwitterMenu}
               value="OfficialBHAFC"
             >
-              <img
-                class="ui avatar image"
-                src="/images/avatar/small/christian.jpg"
-              />
+              <i class="futbol icon" />
               Brighton & Hove Albion
             </option>
             <option
@@ -60,10 +48,7 @@ export default class TwitterMenu extends Component {
               onClick={this.props.updateTwitterMenu}
               value="BurnleyOfficial"
             >
-              <img
-                class="ui avatar image"
-                src="/images/avatar/small/matt.jpg"
-              />
+              <i class="futbol icon" />
               Burnley FC
             </option>
             <option
@@ -71,10 +56,7 @@ export default class TwitterMenu extends Component {
               onClick={this.props.updateTwitterMenu}
               value="ChelseaFC"
             >
-              <img
-                class="ui avatar image"
-                src="/images/avatar/small/justen.jpg"
-              />
+              <i class="futbol icon" />
               Chelsea FC
             </option>
             <option
@@ -82,25 +64,106 @@ export default class TwitterMenu extends Component {
               onClick={this.props.updateTwitterMenu}
               value="CPFC"
             >
-              <img
-                class="ui avatar image"
-                src="/images/avatar/small/justen.jpg"
-              />
+              <i class="futbol icon" />
               Crystal Palace F.C.
             </option>
             <option
               class="item twitterMenuItem"
               onClick={this.props.updateTwitterMenu}
-              value="Everton
-"
+              value="Everton"
             >
-              <img
-                class="ui avatar image"
-                src="/images/avatar/small/justen.jpg"
-              />
+              <i class="futbol icon" />
               Everton
             </option>
-          </ul>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="LCFC"
+            >
+              <i class="futbol icon" />
+              Leicester City
+            </option>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="LFC"
+            >
+              <i class="futbol icon" />
+              Liverpool FC
+            </option>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="ManCity"
+            >
+              <i class="futbol icon" />
+              Manchester City
+            </option>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="ManUtd"
+            >
+              <i class="futbol icon" />
+              Manchester United
+            </option>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="NUFC"
+            >
+              <i class="futbol icon" />
+              Newcastle United FC
+            </option>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="NorwichCityFC"
+            >
+              <i class="futbol icon" />
+              Norwich City FC
+            </option>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="SheffieldUnited"
+            >
+              <i class="futbol icon" />
+              Sheffield United
+            </option>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="SouthamptonFC"
+            >
+              <i class="futbol icon" />
+              Southampton FC
+            </option>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="WatfordFC"
+            >
+              <i class="futbol icon" />
+              Watford Football Club
+            </option>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="WestHamUtd"
+            >
+              <i class="futbol icon" />
+              West Ham United
+            </option>
+            <option
+              class="item twitterMenuItem"
+              onClick={this.props.updateTwitterMenu}
+              value="Wolves"
+            >
+              <i class="futbol icon" />
+              Wolves
+            </option>
+          </div>
         </div>
       </div>
     );

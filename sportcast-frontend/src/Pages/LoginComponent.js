@@ -37,7 +37,7 @@ class LoginComponent extends React.Component {
               />
             </div>
             <div className="field">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Password:</label>
               <input
                 onChange={this.props.handleChange}
                 id="password"

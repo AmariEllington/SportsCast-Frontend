@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import "./App.css";
 import api from "./Services/api";
 import LoginComponent from "./Pages/LoginComponent";
-import Youtube2 from "./Containers/Youtube2";
+import SignUp from "./Pages/SignUp";
 
 import LandingPage from "./Pages/LandingPage";
 import ContentPage from "./Pages/ContentPage";
@@ -72,13 +72,27 @@ export default class App extends Component {
             )}
           />
 
-          <Route exact path="/youtube" render={props => <Youtube2 />} />
-
           <Route
             exact
             path="/login"
             render={props => (
               <LoginComponent
+                {...props}
+                logged_in={this.state.logged_in}
+                onLoginClicked={this.onLoginClicked}
+                handleLogOut={this.handleLogOut}
+                username={this.state.username}
+                handleChange={this.handleChange}
+                password={this.state.password}
+                user={this.state.user}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/signup"
+            render={props => (
+              <SignUp
                 {...props}
                 logged_in={this.state.logged_in}
                 onLoginClicked={this.onLoginClicked}

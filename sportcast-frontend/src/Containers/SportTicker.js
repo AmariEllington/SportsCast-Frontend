@@ -10,9 +10,9 @@ export default class SportTicker extends Component {
         <iframe
           src="http://espn.go.com/bottomline/espnewsbottomlinebasic.html"
           height="65"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
-          allowTransparency="false"
+          allowtransparency="false"
           className="sportsTicker"
         />
       </div>

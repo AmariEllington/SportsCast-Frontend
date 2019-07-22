@@ -26,31 +26,31 @@ export default class Spotify extends Component {
           width="100%"
           height="60"
           src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fguardianfootballweekly%2F"
-          frameborder="0"
+          frameBorder="0"
         />
         <iframe
           width="100%"
           height="60"
           src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Ffoxsportsfootballshow%2F"
-          frameborder="0"
+          frameBorder="0"
         />
         <iframe
           width="100%"
           height="60"
           src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2FESPNFantasyFocusFootball%2F"
-          frameborder="0"
+          frameBorder="0"
         />
         <iframe
           width="100%"
           height="60"
           src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Ffoxcricketpodcast-foxsportsaus%2F"
-          frameborder="0"
+          frameBorder="0"
         />
         <iframe
           width="100%"
           height="60"
           src="https://open.spotify.com/show/1RDjh3ix2iXvatREVd4VLR"
-          frameborder="0"
+          frameBorder="0"
         />
       </div>
     );

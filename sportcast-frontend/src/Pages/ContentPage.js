@@ -17,20 +17,20 @@ export default class ContentPage extends Component {
           <MenuAppBar handleLogOut={this.props.handleLogOut} />
           <SportTicker />
         </div>
-        <div class="ui grid">
-          <div class="eight wide column card">
+        <div className="ui grid">
+          <div className="eight wide column card">
             <NewsFeed />
           </div>
 
-          <div class="eight wide column card">
+          <div className="eight wide column card">
             <Twitter />
           </div>
 
-          <div class="eight wide column card">
+          <div className="eight wide column card">
             <Youtube3 />
           </div>
 
-          <div class="eight wide column card">
+          <div className="eight wide column card">
             <Spotify />
           </div>
         </div>

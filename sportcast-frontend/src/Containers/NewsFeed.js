@@ -92,23 +92,23 @@ export default class NewsFeed extends Component {
 
     return (
       <div className="card card-item ">
-        <div class="ui buttons">
-          <button class="ui button" onClick={this.handleClickUK}>
+        <div className="ui buttons">
+          <button className="ui button" onClick={this.handleClickUK}>
             UK
           </button>
-          <button class="ui button" onClick={this.handleClickUSA}>
+          <button className="ui button" onClick={this.handleClickUSA}>
             USA
           </button>
-          <button class="ui button" onClick={this.handleClickCanada}>
+          <button className="ui button" onClick={this.handleClickCanada}>
             Canada
           </button>
-          <button class="ui button" onClick={this.handleClickBrazil}>
+          <button className="ui button" onClick={this.handleClickBrazil}>
             Brazil
           </button>
-          <button class="ui button" onClick={this.handleClickFrance}>
+          <button className="ui button" onClick={this.handleClickFrance}>
             France
           </button>
-          <button class="ui button" onClick={this.handleClickPortugal}>
+          <button className="ui button" onClick={this.handleClickPortugal}>
             Portugal
           </button>
         </div>

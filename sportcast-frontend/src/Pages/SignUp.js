@@ -11,7 +11,7 @@ export default class SignUp extends React.Component {
   };
 
   createUser = (username, password) => {
-    return fetch(baseURL + "/auth/create", {
+    return fetch(baseURL + "users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

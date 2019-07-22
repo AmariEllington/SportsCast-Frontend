@@ -6,7 +6,7 @@ const headers = {
 };
 
 const login = (username, password) => {
-  return fetch(`${API_BASE_URL}/auth/create`, {
+  return fetch(`${API_BASE_URL}/api/v1/users/signup`, {
     method: "POST",
     headers: headers,
     body: JSON.stringify({ username, password })

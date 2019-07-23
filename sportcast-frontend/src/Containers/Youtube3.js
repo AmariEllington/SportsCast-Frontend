@@ -15,9 +15,14 @@ export default class Youtube3 extends Component {
   };
   render() {
     return (
-      <div>
-        <YoutubeMenu updateYoutubeMenu={this.updateYoutubeMenu} />
-        <ReactPlayer url={this.state.url} />
+      <div className="youtubeDiv">
+        <div className="youtubeMenuDiv">
+          <YoutubeMenu updateYoutubeMenu={this.updateYoutubeMenu} />
+        </div>
+
+        <div className="youtubeInnerDiv">
+          <ReactPlayer url={this.state.url} />
+        </div>
       </div>
     );
   }

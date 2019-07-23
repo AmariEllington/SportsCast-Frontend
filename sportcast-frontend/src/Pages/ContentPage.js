@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+
 import NewsFeed from "../Containers/NewsFeed";
 import Twitter from "../Containers/Twitter";
 import Youtube2 from "../Containers/Youtube2";
@@ -17,6 +18,7 @@ export default class ContentPage extends Component {
           <MenuAppBar handleLogOut={this.props.handleLogOut} />
           <SportTicker />
         </div>
+
         <div className="ui grid">
           <div className="eight wide column card">
             <NewsFeed />

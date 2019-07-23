@@ -63,6 +63,9 @@ body {
   overflow: auto;
   display: block;
   text-align: center;
+  border: 2px solid #929292;
+  border-radius: 7px;
+  justify-content: auto;
 }
 
 .card-item {
@@ -94,35 +97,77 @@ body {
 
 .sportsTicker {
   width: 100%;
+  display: flex;
 }
 
+.sportsTickerDiv {
+  position: relative;
+}
+/*  ---------- landing page ------------ */
 .landingPage {
-  background-color: #f20b0f;
+  background-color: #ffffff;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
+}
+
+.landingPageButtonDiv {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .titleLandingPage {
   justify-content: center;
-  color: aliceblue;
+  text-align: center;
+  display: flex;
+  color: rgb(0, 0, 0);
   font-family: rockwell;
   font-size: 10em;
   font-weight: bold;
   align-self: baseline;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .subheadingTitlePage {
   text-align: center;
   justify-content: center;
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   font-family: rockwell;
   font-size: 5em;
   align-self: baseline;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
+.landingPageButton {
+  width: 30%;
+}
+
+/* ------------------------------------ */
+
+/* ------------ login form  ------------- */
+
+.logInForm {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10%;
+}
+
+.loginInFormDiv {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+}
+
+/* ------------------------------------- */
 .menu {
   overflow: auto;
 }
@@ -135,20 +180,43 @@ body {
   overflow: auto;
 } */
 
-/* .youtube {
+.youtubeDiv {
   order: 0;
   flex: 2 1 auto;
   align-self: auto;
+  text-align: center;
+}
+
+/* .youtubeInnerDiv {
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 } */
 
-/* .spotify {
-  order: 0;
-  flex: 1 1 auto;
-  align-self: auto;
-  display: grid;
-  float: right;
-  align-self: baseline;
+/* .youtubeMenuDiv {
+  display: inline-block;
+  margin: 0 auto;
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 } */
+
+.spotifyInnerDiv {
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
 /* .newsfeed {
   order: 0;
   flex: 2 1 auto;
@@ -184,11 +252,6 @@ body {
 
 .list-group-item:hover {
   background-color: #eee;
-}
-
-.loginButton {
-  text-align: center;
-  width: 30%;
 }
 
 .twitterMenuItem {

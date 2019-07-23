@@ -5,7 +5,7 @@ import React, { Component } from "react";
 export default class SportTicker extends Component {
   render() {
     return (
-      <div>
+      <div className="sportsTickerDiv">
         {" "}
         <iframe
           src="http://espn.go.com/bottomline/espnewsbottomlinebasic.html"

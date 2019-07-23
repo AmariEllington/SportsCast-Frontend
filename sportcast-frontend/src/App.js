@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "./App.css";
 import api from "./Services/api";
 import LoginComponent from "./Pages/LoginComponent";
@@ -8,6 +8,8 @@ import SignUp from "./Pages/SignUp";
 
 import LandingPage from "./Pages/LandingPage";
 import ContentPage from "./Pages/ContentPage";
+
+import { DragDropContext } from "react-beautiful-dnd";
 
 const baseUrl = "http://localhost:3001";
 

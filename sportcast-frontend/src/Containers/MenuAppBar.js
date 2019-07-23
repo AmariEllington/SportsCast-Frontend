@@ -34,7 +34,7 @@ export default class MenuExampleInvertedSegment extends Component {
     const { open, dimmer } = this.state;
     return (
       <Segment inverted>
-        <Menu inverted secondary>
+        <Menu inverted>
           <div
             className="ui animated button"
             tabIndex="0"
@@ -53,7 +53,6 @@ export default class MenuExampleInvertedSegment extends Component {
             <Modal.Content>
               <YoutubeMenu updateYoutubeMenu={this.updateYoutubeMenu} />
               <input />
-
               <TwitterMenu updateTwitterMenu={this.updateTwitterMenu} />
               <input />
             </Modal.Content>

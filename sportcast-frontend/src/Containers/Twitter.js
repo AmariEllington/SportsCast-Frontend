@@ -23,7 +23,7 @@ export default class Twitter extends Component {
   };
   render() {
     return (
-      <div className="card card-item">
+      <div className="card-item">
         <TwitterMenu updateTwitterMenu={this.updateTwitterMenu} />
         <form onSubmit={this.handleClick}>
           <input type="text" name="formInput" />

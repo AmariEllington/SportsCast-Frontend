@@ -113,7 +113,7 @@ export default class NewsFeed extends Component {
           </button>
         </div>
         {newsStories.map((news, index) => (
-          <News key={news.id} news={news} index={index} />
+          <News key={index} news={news} index={index} />
         ))}
       </div>
     );

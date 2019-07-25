@@ -3,22 +3,12 @@ import SpotifyPlayer from "react-spotify-player";
 
 export default class Spotify extends Component {
   render() {
-    // const size = {
-    //   width: "100%",
-    //   height: 300
-    // };
-    // const view = "list"; // or 'coverart'
-    // const theme = "white"; // or 'white'
-
-    // return (
-    //   <div className="spotify">
-    //     <SpotifyPlayer
-    //       uri="spotify:show:2NqEBd6EJNfs6A3527xwVD"
-    //       view={view}
-    //       theme={theme}
-    //     />
-    //   </div>
-    // );
+    const size = {
+      width: "100%",
+      height: 300
+    };
+    const view = "list"; // or 'coverart'
+    const theme = "white"; // or 'white'
 
     return (
       <div className="spotifyDiv">
@@ -53,6 +43,12 @@ export default class Spotify extends Component {
             src="https://open.spotify.com/show/1RDjh3ix2iXvatREVd4VLR"
             frameBorder="0"
           />
+
+          {/* <SpotifyPlayer
+            uri="spotify:show:1D1ND2NmZBuJLJzd2XwtbS"
+            view={view}
+            theme={theme}
+          /> */}
         </div>
       </div>
     );

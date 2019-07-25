@@ -11,7 +11,7 @@ export default class LandingPage extends Component {
           <h1 className="titleLandingPage">Welcome To Sportscast.</h1>
 
           <h2 className="subheadingTitlePage">
-            - bringing the sports to you -
+            - people chasing after a ball....exciting!! -
           </h2>
           <div className="landingPageButtonDiv">
             <Link to="/login">

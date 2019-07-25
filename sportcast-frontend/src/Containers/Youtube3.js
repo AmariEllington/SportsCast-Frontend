@@ -17,7 +17,10 @@ export default class Youtube3 extends Component {
     return (
       <div className="youtubeDiv">
         <div className="youtubeMenuDiv">
-          <YoutubeMenu updateYoutubeMenu={this.updateYoutubeMenu} />
+          <YoutubeMenu
+            updateYoutubeMenu={this.updateYoutubeMenu}
+            pages={this.props.pages}
+          />
         </div>
 
         <div className="youtubeInnerDiv">

@@ -10,7 +10,22 @@ import Spotify from "../Containers/Spotify";
 import MenuAppBar from "../Containers/MenuAppBar";
 import SportTicker from "../Containers/SportTicker";
 
+const URL = `http://localhost:3001/pages`;
 export default class ContentPage extends Component {
+  state = {
+    pages: []
+  };
+
+  componentDidMount() {
+    fetch(URL)
+      .then(resp => resp.json())
+      .then(resp =>
+        this.setState({
+          pages: resp
+        })
+      );
+  }
+
   render() {
     return (
       <div>
@@ -25,11 +40,11 @@ export default class ContentPage extends Component {
           </div>
 
           <div className="eight wide column card">
-            <Twitter />
+            <Twitter pages={this.state.pages} />
           </div>
 
           <div className="eight wide column card">
-            <Youtube3 />
+            <Youtube3 pages={this.state.pages} />
           </div>
 
           <div className="eight wide column card">

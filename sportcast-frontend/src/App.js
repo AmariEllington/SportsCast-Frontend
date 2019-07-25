@@ -7,26 +7,39 @@ import LoginComponent from "./Pages/LoginComponent";
 import SignUp from "./Pages/SignUp";
 
 import LandingPage from "./Pages/LandingPage";
-import ContentPage from "./Pages/ContentPage";
 
 import { DragDropContext } from "react-beautiful-dnd";
 
 const baseUrl = "http://localhost:3001";
+const URL = `http://localhost:3001/pages`;
 
 export default class App extends Component {
   state = {
     logged_in: false,
     username: "",
-    password: ""
+    password: "",
+    pages: [],
+    page: 0
   };
 
   componentDidMount() {
     const token = localStorage.getItem("token");
     if (token) {
       api.getCurrentUser(token).then(user => {
-        this.setState({ logged_in: true, username: user.username });
+        this.setState({
+          logged_in: true,
+          username: user.username
+        });
       });
     }
+
+    fetch(URL)
+      .then(resp => resp.json())
+      .then(resp =>
+        this.setState({
+          pages: resp
+        })
+      );
   }
 
   handleChange = e => {
@@ -103,6 +116,7 @@ export default class App extends Component {
                 handleChange={this.handleChange}
                 password={this.state.password}
                 user={this.state.user}
+                pages={this.state.pages}
               />
             )}
           />

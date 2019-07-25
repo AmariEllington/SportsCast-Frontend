@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Menu, Segment, Button, Image, Modal, Header } from "semantic-ui-react";
 import YoutubeMenu from "../Components/YoutubeMenu";
 import TwitterMenu from "../Components/TwitterMenu";
+import MenuAppbar from "../Containers/SportTicker";
 
 export default class MenuExampleInvertedSegment extends Component {
   state = {

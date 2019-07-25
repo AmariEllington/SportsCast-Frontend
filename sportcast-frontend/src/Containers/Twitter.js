@@ -19,7 +19,6 @@ export default class Twitter extends Component {
     this.setState({
       input: event.target.value
     });
-    console.log(event.target.value);
   };
   render() {
     return (

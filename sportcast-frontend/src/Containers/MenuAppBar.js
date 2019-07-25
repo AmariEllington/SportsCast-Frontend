@@ -21,14 +21,12 @@ export default class MenuExampleInvertedSegment extends Component {
     this.setState({
       youtube: event.target.value
     });
-    console.log(event);
   };
 
   updateTwitterMenu = event => {
     this.setState({
       twitter: event.target.value
     });
-    console.log(event);
   };
 
   render() {

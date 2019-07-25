@@ -34,15 +34,12 @@ export default class SignUp extends React.Component {
       event.target.page.value
     ).then(alert("User added"));
     this.props.history.push("/content");
-    console.log(event.target.page.value);
   };
 
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
-
-    console.log(e.target);
   };
 
   render() {

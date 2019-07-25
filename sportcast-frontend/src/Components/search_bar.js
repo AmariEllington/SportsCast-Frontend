@@ -4,7 +4,7 @@ import React, { Component } from "react"; //Always need in JSX files
 class SearchBar extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
+
     this.state = { term: "" };
   }
 

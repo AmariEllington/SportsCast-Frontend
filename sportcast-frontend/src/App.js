@@ -19,7 +19,8 @@ export default class App extends Component {
     username: "",
     password: "",
     pages: [],
-    page: 0
+    user: [],
+    page: []
   };
 
   componentDidMount() {
@@ -28,8 +29,11 @@ export default class App extends Component {
       api.getCurrentUser(token).then(user => {
         this.setState({
           logged_in: true,
-          username: user.username
+          username: user.username,
+          user: user,
+          page: user.page
         });
+        console.log(user);
       });
     }
 

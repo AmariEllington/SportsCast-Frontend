@@ -64,7 +64,7 @@ body {
   display: block;
   text-align: center;
   border: 2px solid #929292;
-  border-radius: 7px;
+
   justify-content: auto;
 }
 
@@ -83,16 +83,23 @@ body {
 .newsCard img {
   object-fit: cover;
   width: 50%;
-  height: 7%;
+  height: 100%;
+  float: left;
+}
+
+.newsCard h3 {
+  color: black;
+  text-align: center;
 }
 
 .newsCard {
   border: 1px solid black;
   overflow: auto;
+  width: 100%;
 }
 
 .menuTitle {
-  text-align: center;
+  justify-content: center;
 }
 
 .sportsTicker {
@@ -180,6 +187,17 @@ body {
   overflow: auto;
 } */
 
+.twitterMenuDiv {
+}
+
+.twitterMenuDiv form {
+  float: right;
+}
+
+.twitterMenu {
+  float: left;
+}
+
 .youtubeDiv {
   order: 0;
   flex: 2 1 auto;
@@ -187,25 +205,13 @@ body {
   text-align: center;
 }
 
-/* .youtubeInnerDiv {
-  display: inline-block;
+.youtubeReactPlayer {
   margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-} */
+}
 
-/* .youtubeMenuDiv {
-  display: inline-block;
-  margin: 0 auto;
-  position: inherit;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-} */
+.youtubeMenu {
+  float: left;
+}
 
 .spotifyInnerDiv {
   display: inline-block;

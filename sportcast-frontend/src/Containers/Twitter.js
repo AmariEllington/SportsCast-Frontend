@@ -23,15 +23,17 @@ export default class Twitter extends Component {
   render() {
     return (
       <div className="card-item">
-        <TwitterMenu
-          updateTwitterMenu={this.updateTwitterMenu}
-          pages={this.props.pages}
-        />
-        <form onSubmit={this.handleClick}>
-          <input type="text" name="formInput" />
-          <input type="submit" value="submit" />
-        </form>
+        <div className="twitterMenuDiv">
+          <TwitterMenu
+            updateTwitterMenu={this.updateTwitterMenu}
+            pages={this.props.pages}
+          />
 
+          <form onSubmit={this.handleClick}>
+            <input type="text" name="formInput" />
+            <input type="submit" value="submit" />
+          </form>
+        </div>
         <TwitterTimelineEmbed
           key={this.state.input}
           sourceType="profile"

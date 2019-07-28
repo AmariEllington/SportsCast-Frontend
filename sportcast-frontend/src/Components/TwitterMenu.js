@@ -4,7 +4,7 @@ export default class TwitterMenu extends Component {
   render() {
     return (
       <div>
-        <div className="ui inline dropdown simple item ">
+        <div className="ui inline dropdown simple item twitterMenu ">
           <div className="text">
             <i className="twitter squarefoot icon" />
             Select A Twitter Page

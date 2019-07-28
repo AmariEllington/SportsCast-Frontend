@@ -11,7 +11,8 @@ const BRAZILURL = `https://newsapi.org/v2/top-headlines?country=br&category=spor
 const FRANCEURL = `https://newsapi.org/v2/top-headlines?country=fr&category=sports&apiKey=a445e20ba5484749b0fa9b70ac35f421`;
 const CANADAURL = `https://newsapi.org/v2/top-headlines?country=ca&category=sports&apiKey=a445e20ba5484749b0fa9b70ac35f421`;
 const PORTUGALURL = `https://newsapi.org/v2/top-headlines?country=pt&category=sports&apiKey=a445e20ba5484749b0fa9b70ac35f421`;
-
+const GERMANYURL = `https://newsapi.org/v2/top-headlines?country=de&category=sports&apiKey=a445e20ba5484749b0fa9b70ac35f421`;
+const IRELANDURL = `https://newsapi.org/v2/top-headlines?country=ie&category=sports&apiKey=a445e20ba5484749b0fa9b70ac35f421`;
 export default class NewsFeed extends Component {
   state = {
     newsStories: []
@@ -87,12 +88,32 @@ export default class NewsFeed extends Component {
       );
   };
 
+  handleClickChinese = () => {
+    fetch(GERMANYURL)
+      .then(data => data.json())
+      .then(data =>
+        this.setState({
+          newsStories: data.articles
+        })
+      );
+  };
+
+  handleClickIreland = () => {
+    fetch(IRELANDURL)
+      .then(data => data.json())
+      .then(data =>
+        this.setState({
+          newsStories: data.articles
+        })
+      );
+  };
+
   render() {
     const { newsStories } = this.state;
 
     return (
       <div className="card-item ">
-        <div className="ui buttons">
+        <div className="ui buttons ">
           <button className="ui button" onClick={this.handleClickUK}>
             UK
           </button>
@@ -110,6 +131,12 @@ export default class NewsFeed extends Component {
           </button>
           <button className="ui button" onClick={this.handleClickPortugal}>
             Portugal
+          </button>
+          <button className="ui button" onClick={this.handleClickChinese}>
+            Germany
+          </button>
+          <button className="ui button" onClick={this.handleClickIreland}>
+            Ireland
           </button>
         </div>
         {newsStories.map((news, index) => (

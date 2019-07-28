@@ -16,25 +16,25 @@ export default class Spotify extends Component {
 
     switch (state) {
       case "SportsTalkShow":
-        return <div>SportsTalkShow</div>;
+        return "https://tunein.com/embed/player/p857/";
       case "Football":
-        return <div>Football</div>;
+        return "https://tunein.com/embed/player/p1854/";
       case "CollegeBasketball":
-        return <div>CollegeBasketball</div>;
+        return "https://tunein.com/embed/player/p307305/";
       case "CollegeFootball":
-        return <div>CollegeFootball</div>;
+        return "https://tunein.com/embed/player/p796870/";
       case "MLB":
-        return <div>MLB</div>;
+        return "https://tunein.com/embed/player/p779237/";
       case "NBA":
-        return <div>NBA</div>;
+        return "https://tunein.com/embed/player/p393714/";
       case "NFL":
-        return <div>NFL</div>;
+        return "https://tunein.com/embed/player/p532683/";
       case "Rugby":
-        return <div>Rugby</div>;
+        return "https://tunein.com/embed/player/p1162744/";
       case "Boxing":
-        return <div>Boxing</div>;
+        return "https://tunein.com/embed/player/p966710/";
       case "Golf":
-        return <div>Golf</div>;
+        return "https://tunein.com/embed/player/p1156777/";
     }
   };
 
@@ -103,7 +103,14 @@ export default class Spotify extends Component {
             </button>
           </div>
 
-          <div>{this.renderPodcast()}</div>
+          <div>
+            <iframe
+              src={this.renderPodcast()}
+              scrolling="no"
+              frameborder="no"
+              className="podcast"
+            />
+          </div>
         </div>
       </div>
     );

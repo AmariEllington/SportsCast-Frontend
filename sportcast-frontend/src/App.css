@@ -213,6 +213,11 @@ body {
   float: left;
 }
 
+.podcast {
+  height: 35vh;
+  width: 100%;
+}
+
 .spotifyInnerDiv {
   display: inline-block;
   margin: 0 auto;

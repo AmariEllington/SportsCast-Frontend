@@ -28,26 +28,26 @@ export default class ContentPage extends Component {
 
   render() {
     return (
-      <div>
-        <div>
+      <div className="contentDiv">
+        <div className="menuAppBar">
           <MenuAppBar handleLogOut={this.props.handleLogOut} />
           {/* <SportTicker /> */}
         </div>
 
-        <div className="ui grid">
-          <div className="eight wide column card">
+        <div className="ui grid contentOuterDiv ">
+          <div className="eight wide column card conentInnerCard">
             <NewsFeed />
           </div>
 
-          <div className="eight wide column card">
+          <div className="eight wide column card conentInnerCard">
             <Twitter pages={this.state.pages} user={this.props.user} />
           </div>
 
-          <div className="eight wide column card">
+          <div className="eight wide column card conentInnerCard">
             <Youtube3 pages={this.state.pages} user={this.props.user} />
           </div>
 
-          <div className="eight wide column card">
+          <div className="eight wide column card conentInnerCard">
             <Spotify />
           </div>
         </div>

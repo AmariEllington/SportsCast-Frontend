@@ -29,7 +29,7 @@ export default class Twitter extends Component {
             pages={this.props.pages}
           />
 
-          <form onSubmit={this.handleClick}>
+          <form onSubmit={this.handleClick} className="ui button">
             <input type="text" name="formInput" />
             <input type="submit" value="submit" />
           </form>

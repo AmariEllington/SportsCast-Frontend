@@ -32,8 +32,8 @@ export default class MenuExampleInvertedSegment extends Component {
   render() {
     const { open, dimmer } = this.state;
     return (
-      <Segment inverted>
-        <Menu inverted>
+      <div>
+        <div class="ui labeled icon menu">
           <div
             className="ui animated button"
             tabIndex="0"
@@ -68,8 +68,8 @@ export default class MenuExampleInvertedSegment extends Component {
               />
             </Modal.Actions>
           </Modal>
-        </Menu>
-      </Segment>
+        </div>
+      </div>
     );
   }
 }

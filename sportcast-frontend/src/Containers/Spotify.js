@@ -35,7 +35,7 @@ export default class Spotify extends Component {
     return (
       <div className="spotifyDiv">
         <div className="card-item spotifyInnerDiv">
-          <div className="ui buttons ">
+          <div className="ui buttons podcastMenu">
             <button
               className="ui button"
               name="football"

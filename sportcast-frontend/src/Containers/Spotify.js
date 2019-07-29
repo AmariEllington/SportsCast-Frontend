@@ -43,46 +43,47 @@ export default class Spotify extends Component {
             >
               Football
             </button>
-            <button
-              className="ui button"
-              name="CollegeBasketball"
-              onClick={this.handleClick}
-            >
-              College Basketball
-            </button>
-            <button
-              className="ui button"
-              name="CollegeFootball"
-              onClick={this.handleClick}
-            >
-              College Football
-            </button>
-            <button className="ui button" name="MLB" onClick={this.handleClick}>
-              MLB
-            </button>
             <button className="ui button" name="nba" onClick={this.handleClick}>
               NBA
             </button>
-            <button className="ui button" name="NFL" onClick={this.handleClick}>
+            <button className="ui button" name="nfl" onClick={this.handleClick}>
               NFL
             </button>
             <button
               className="ui button"
-              name="Rugby"
+              name="rugby"
               onClick={this.handleClick}
             >
               Rugby
             </button>
             <button
               className="ui button"
-              name="Boxing"
+              name="college_basketball"
+              onClick={this.handleClick}
+            >
+              College Basketball
+            </button>
+            <button
+              className="ui button"
+              name="college_football"
+              onClick={this.handleClick}
+            >
+              College Football
+            </button>
+            <button className="ui button" name="mlb" onClick={this.handleClick}>
+              MLB
+            </button>
+
+            <button
+              className="ui button"
+              name="boxing"
               onClick={this.handleClick}
             >
               Boxing
             </button>
             <button
               className="ui button"
-              name="Golf"
+              name="golf"
               onClick={this.handleClick}
             >
               Golf

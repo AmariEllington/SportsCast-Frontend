@@ -31,7 +31,7 @@ export default class ContentPage extends Component {
       <div>
         <div>
           <MenuAppBar handleLogOut={this.props.handleLogOut} />
-          <SportTicker />
+          {/* <SportTicker /> */}
         </div>
 
         <div className="ui grid">

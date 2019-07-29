@@ -4,7 +4,7 @@ import TwitterMenu from "../Components/TwitterMenu";
 
 export default class Twitter extends Component {
   state = {
-    input: "espn"
+    input: this.props.user.page.twitter
   };
 
   handleClick = event => {

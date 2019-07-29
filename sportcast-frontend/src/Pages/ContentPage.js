@@ -40,11 +40,11 @@ export default class ContentPage extends Component {
           </div>
 
           <div className="eight wide column card">
-            <Twitter pages={this.state.pages} />
+            <Twitter pages={this.state.pages} user={this.props.user} />
           </div>
 
           <div className="eight wide column card">
-            <Youtube3 pages={this.state.pages} />
+            <Youtube3 pages={this.state.pages} user={this.props.user} />
           </div>
 
           <div className="eight wide column card">

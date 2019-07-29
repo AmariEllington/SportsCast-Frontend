@@ -4,8 +4,7 @@ import YoutubeMenu from "../Components/YoutubeMenu";
 
 export default class Youtube3 extends Component {
   state = {
-    url:
-      "https://www.youtube.com/playlist?list=PLISuFiQTdKDWkD5rGCcc8r3E-AMT-XgBV"
+    url: this.props.user.page.youtube
   };
 
   updateYoutubeMenu = event => {

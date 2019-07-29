@@ -11,7 +11,7 @@ import LandingPage from "./Pages/LandingPage";
 import { DragDropContext } from "react-beautiful-dnd";
 
 const baseUrl = "http://localhost:3001";
-const URL = `http://localhost:3001/pages`;
+const URL = `http://localhost:3001/pages/`;
 
 export default class App extends Component {
   state = {
@@ -19,8 +19,7 @@ export default class App extends Component {
     username: "",
     password: "",
     pages: [],
-    user: [],
-    page: []
+    user: []
   };
 
   componentDidMount() {
@@ -30,8 +29,7 @@ export default class App extends Component {
         this.setState({
           logged_in: true,
           username: user.username,
-          user: user,
-          page: user.page
+          user: user
         });
         console.log(user);
       });

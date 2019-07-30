@@ -2,22 +2,25 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Login from "../Pages/LoginComponent";
 import SignUp from "../Pages/SignUp";
+import Logo from "../Components/Logo.png";
 
 export default class LandingPage extends Component {
   render() {
     return (
       <div className="landingPage">
         <div className="landingPageInnerDiv">
-          <h1 className="titleLandingPage">Welcome To Sportscast.</h1>
+          {/* <h1 className="titleLandingPage">Welcome To Sportscast.</h1>
 
           <h2 className="subheadingTitlePage">
             - people chasing after a ball....exciting!! -
-          </h2>
+          </h2> */}
+          <img src={Logo} alt="logo" />
           <div className="landingPageButtonDiv">
             <Link to="/login">
               <div
                 className="ui animated fade button landingPageButton"
                 tabIndex="0"
+                id="buttonColour"
               >
                 <div className="visible content"> Login </div>
                 <div className="hidden content">Sport Awaits</div>
@@ -27,6 +30,7 @@ export default class LandingPage extends Component {
               <div
                 className="ui animated fade button landingPageButton"
                 tabIndex="0"
+                id="buttonColour"
               >
                 <div className="visible content"> Sign Up </div>
                 <div className="hidden content">Join The Fun</div>

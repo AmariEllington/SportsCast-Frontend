@@ -112,7 +112,7 @@ export default class NewsFeed extends Component {
     const { newsStories } = this.state;
 
     return (
-      <div className="card-item ">
+      <div className="card-item">
         <div className="ui buttons">
           <button
             className="ui button"

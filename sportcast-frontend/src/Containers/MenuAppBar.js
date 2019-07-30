@@ -40,6 +40,7 @@ export default class MenuExampleInvertedSegment extends Component {
             className="ui animated button navbarLogout"
             tabIndex="0"
             onClick={this.props.handleLogOut}
+            id="navbarLogoutId"
           >
             <div className="visible content navbarLogoutText ">Logout</div>
             <div className="hidden content">

@@ -63,7 +63,8 @@ body {
 .navbar img {
   width: 15vw;
   height: 5vh;
-  float: right;
+  float: left;
+  border: 2px solid black;
 }
 
 .card {
@@ -107,6 +108,7 @@ body {
 
 #buttonColour {
   background: rgb(7, 251, 139);
+  border: 1px solid black;
 }
 
 .newsCard {
@@ -186,6 +188,9 @@ body {
   text-align: center;
   margin: 0 auto;
   padding: 10%;
+  background: rgb(7, 251, 139);
+  border: 2px solid black;
+  width: 100vw;
 }
 
 .loginInFormDiv {
@@ -206,8 +211,10 @@ body {
 .menuAppBar {
   display: block;
   width: 100vw;
-  margin: auto;
+  margin-bottom: 1%;
   padding-bottom: 1.5vh;
+  background: rgb(7, 251, 139);
+  padding: 0.5%;
 }
 
 .navbar {
@@ -219,6 +226,16 @@ body {
 
 .navbarLogout {
   height: 5vh;
+  float: right;
+}
+
+#navbarLogoutId {
+  background-color: rgb(7, 251, 139);
+}
+
+#signuplogo {
+  width: 100vw;
+  height: 20vw;
 }
 
 .navbarLogoutText {

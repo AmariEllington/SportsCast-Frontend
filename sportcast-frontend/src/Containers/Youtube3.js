@@ -23,7 +23,12 @@ export default class Youtube3 extends Component {
         </div>
 
         <div className="youtubeInnerDiv">
-          <ReactPlayer url={this.state.url} className="youtubeReactPlayer" />
+          <ReactPlayer
+            url={this.state.url}
+            className="youtubeReactPlayer"
+            height="40vh"
+            width="60vw"
+          />
         </div>
       </div>
     );

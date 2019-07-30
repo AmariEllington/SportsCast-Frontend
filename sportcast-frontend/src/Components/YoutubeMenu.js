@@ -4,7 +4,10 @@ export default class YoutubeMenu extends Component {
   render() {
     return (
       <div>
-        <div className="ui inline dropdown simple item youtubeMenu ui button">
+        <div
+          id="buttonColour"
+          className="ui inline dropdown simple item youtubeMenu ui button "
+        >
           <div className="text">
             <i className="youtube icon" />
             Select A Youtube Playlist

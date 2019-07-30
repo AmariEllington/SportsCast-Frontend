@@ -29,16 +29,21 @@ export default class Twitter extends Component {
             pages={this.props.pages}
           />
 
-          <form onSubmit={this.handleClick} className="ui button">
+          <form
+            onSubmit={this.handleClick}
+            className="ui button"
+            id="buttonColour"
+          >
             <input type="text" name="formInput" />
             <input type="submit" value="submit" />
           </form>
+          <TwitterTimelineEmbed
+            key={this.state.input}
+            sourceType="profile"
+            screenName={this.state.input}
+            className="twitterTimeline"
+          />
         </div>
-        <TwitterTimelineEmbed
-          key={this.state.input}
-          sourceType="profile"
-          screenName={this.state.input}
-        />
       </div>
     );
   }

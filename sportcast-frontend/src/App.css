@@ -64,10 +64,8 @@ body {
   height: 45vh;
   width: 40vw;
   overflow: auto;
-  border-radius: 2%;
   text-align: center;
-  border: 2px solid #929292;
-  justify-content: auto;
+  border: 3px solid black;
 }
 
 .card-item {
@@ -87,19 +85,37 @@ body {
   width: 50%;
   height: 100%;
   float: left;
+  clear: left;
 }
 
 .newsCard h3 {
+  padding-top: 10%;
   color: black;
   text-align: center;
 }
 
-.newsCard {
-  border: 1px solid black;
-  overflow: auto;
-  width: 100%;
+.newsCardTitleDiv {
+  background: rgb(7, 251, 139);
+  height: 5vh;
 }
 
+#buttonColour {
+  background: rgb(7, 251, 139);
+}
+
+.newsCard {
+  overflow: auto;
+  width: 100%;
+  border: 2px solid black;
+}
+
+.newsTitleUnderscore {
+  width: 15vw;
+  height: 1vh;
+  background: black;
+  float: right;
+  margin-right: 12%;
+}
 .menuTitle {
   justify-content: center;
 }
@@ -185,26 +201,31 @@ body {
   display: block;
   width: 100vw;
   margin: auto;
+  padding-bottom: 1.5vh;
 }
 
 .contentOuterDiv {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: white;
+  height: 100vh;
 }
 
-.conentInnerCard {
-  display: flex;
-  align-items: center;
+.contentInnerCard {
+  overflow: auto;
+  align-content: center;
   justify-content: center;
 }
 
-/* .twitter {
+.timelineTweet {
   order: 0;
   flex: 1 1 auto;
   align-self: stretch;
   display: block;
   height: 60vh;
   overflow: auto;
-} */
+}
 
 .podcastMenu {
   overflow: auto;
@@ -227,6 +248,7 @@ body {
   flex: 2 1 auto;
   align-self: auto;
   text-align: center;
+  width: 100%;
 }
 
 .youtubeReactPlayer {

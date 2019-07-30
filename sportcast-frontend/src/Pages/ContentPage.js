@@ -35,20 +35,19 @@ export default class ContentPage extends Component {
         </div>
 
         <div className="ui grid contentOuterDiv ">
-          <div className="eight wide column card conentInnerCard">
-            <NewsFeed />
-          </div>
-
-          <div className="eight wide column card conentInnerCard">
-            <Twitter pages={this.state.pages} user={this.props.user} />
-          </div>
-
-          <div className="eight wide column card conentInnerCard">
+          <div className="ten wide column row card contentInnerCard">
             <Youtube3 pages={this.state.pages} user={this.props.user} />
           </div>
 
-          <div className="eight wide column card conentInnerCard">
+          <div className="six wide column row card contentInnerCard">
+            <Twitter pages={this.state.pages} user={this.props.user} />
+          </div>
+
+          <div className="six wide column row card contentInnerCard">
             <Spotify />
+          </div>
+          <div className="ten wide column row card contentInnerCard">
+            <NewsFeed />
           </div>
         </div>
       </div>

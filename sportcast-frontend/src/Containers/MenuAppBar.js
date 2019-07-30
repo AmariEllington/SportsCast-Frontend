@@ -33,7 +33,7 @@ export default class MenuExampleInvertedSegment extends Component {
     const { open, dimmer } = this.state;
     return (
       <div>
-        <div class="ui labeled icon menu">
+        <div className="ui labeled icon menu inverted navbar">
           <div
             className="ui animated button"
             tabIndex="0"
@@ -45,7 +45,7 @@ export default class MenuExampleInvertedSegment extends Component {
             </div>
           </div>
 
-          <Button onClick={this.show("blurring")}>Preference</Button>
+          {/* <Button onClick={this.show("blurring")}>Preference</Button>
 
           <Modal dimmer={dimmer} open={open} onClose={this.close}>
             <Modal.Header>Preference</Modal.Header>
@@ -67,7 +67,7 @@ export default class MenuExampleInvertedSegment extends Component {
                 onClick={this.close}
               />
             </Modal.Actions>
-          </Modal>
+          </Modal> */}
         </div>
       </div>
     );

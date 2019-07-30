@@ -113,29 +113,61 @@ export default class NewsFeed extends Component {
 
     return (
       <div className="card-item ">
-        <div className="ui buttons ">
-          <button className="ui button" onClick={this.handleClickUK}>
+        <div className="ui buttons">
+          <button
+            className="ui button"
+            id="buttonColour"
+            onClick={this.handleClickUK}
+          >
             UK
           </button>
-          <button className="ui button" onClick={this.handleClickUSA}>
+          <button
+            className="ui button"
+            id="buttonColour"
+            onClick={this.handleClickUSA}
+          >
             USA
           </button>
-          <button className="ui button" onClick={this.handleClickCanada}>
+          <button
+            className="ui button"
+            id="buttonColour"
+            onClick={this.handleClickCanada}
+          >
             Canada
           </button>
-          <button className="ui button" onClick={this.handleClickBrazil}>
+          <button
+            className="ui button"
+            id="buttonColour"
+            onClick={this.handleClickBrazil}
+          >
             Brazil
           </button>
-          <button className="ui button" onClick={this.handleClickFrance}>
+          <button
+            className="ui button"
+            id="buttonColour"
+            onClick={this.handleClickFrance}
+          >
             France
           </button>
-          <button className="ui button" onClick={this.handleClickPortugal}>
+          <button
+            className="ui button"
+            id="buttonColour"
+            onClick={this.handleClickPortugal}
+          >
             Portugal
           </button>
-          <button className="ui button" onClick={this.handleClickChinese}>
+          <button
+            className="ui button"
+            id="buttonColour"
+            onClick={this.handleClickChinese}
+          >
             Germany
           </button>
-          <button className="ui button" onClick={this.handleClickIreland}>
+          <button
+            className="ui button"
+            id="buttonColour"
+            onClick={this.handleClickIreland}
+          >
             Ireland
           </button>
         </div>

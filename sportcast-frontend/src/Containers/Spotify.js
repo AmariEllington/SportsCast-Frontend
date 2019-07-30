@@ -4,7 +4,7 @@ import Podcast from "../Components/Podcast";
 const URL = `http://localhost:3001/podcast_group/`;
 export default class Spotify extends Component {
   state = {
-    podcast: "nba",
+    podcast: "football",
     allPodcast: []
   };
 
@@ -39,19 +39,31 @@ export default class Spotify extends Component {
             <button
               className="ui button"
               name="football"
+              id="buttonColour"
               onClick={this.handleClick}
             >
               Football
             </button>
-            <button className="ui button" name="nba" onClick={this.handleClick}>
+            <button
+              className="ui button"
+              name="nba"
+              id="buttonColour"
+              onClick={this.handleClick}
+            >
               NBA
             </button>
-            <button className="ui button" name="nfl" onClick={this.handleClick}>
+            <button
+              className="ui button"
+              name="nfl"
+              id="buttonColour"
+              onClick={this.handleClick}
+            >
               NFL
             </button>
             <button
               className="ui button"
               name="rugby"
+              id="buttonColour"
               onClick={this.handleClick}
             >
               Rugby
@@ -59,6 +71,7 @@ export default class Spotify extends Component {
             <button
               className="ui button"
               name="college_basketball"
+              id="buttonColour"
               onClick={this.handleClick}
             >
               College Basketball
@@ -66,17 +79,24 @@ export default class Spotify extends Component {
             <button
               className="ui button"
               name="college_football"
+              id="buttonColour"
               onClick={this.handleClick}
             >
               College Football
             </button>
-            <button className="ui button" name="mlb" onClick={this.handleClick}>
+            <button
+              className="ui button"
+              name="mlb"
+              id="buttonColour"
+              onClick={this.handleClick}
+            >
               MLB
             </button>
 
             <button
               className="ui button"
               name="boxing"
+              id="buttonColour"
               onClick={this.handleClick}
             >
               Boxing
@@ -84,6 +104,7 @@ export default class Spotify extends Component {
             <button
               className="ui button"
               name="golf"
+              id="buttonColour"
               onClick={this.handleClick}
             >
               Golf

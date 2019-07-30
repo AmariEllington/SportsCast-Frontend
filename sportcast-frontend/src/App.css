@@ -60,6 +60,12 @@ body {
 .contentDiv {
 }
 
+.navbar img {
+  width: 15vw;
+  height: 5vh;
+  float: right;
+}
+
 .card {
   height: 45vh;
   width: 40vw;
@@ -202,6 +208,22 @@ body {
   width: 100vw;
   margin: auto;
   padding-bottom: 1.5vh;
+}
+
+.navbar {
+  display: sticky;
+  width: 100vw;
+  height: 5vh;
+  margin: auto;
+}
+
+.navbarLogout {
+  height: 5vh;
+}
+
+.navbarLogoutText {
+  margin: 0 auto;
+  padding-top: 15%;
 }
 
 .contentOuterDiv {

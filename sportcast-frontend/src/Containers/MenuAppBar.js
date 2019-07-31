@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import { Menu, Segment, Button, Image, Modal, Header } from "semantic-ui-react";
-import YoutubeMenu from "../Components/YoutubeMenu";
-import TwitterMenu from "../Components/TwitterMenu";
-import MenuAppbar from "../Containers/SportTicker";
 import Logo from "../Components/Logo.png";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 export default class MenuExampleInvertedSegment extends Component {
   state = {
@@ -31,48 +28,24 @@ export default class MenuExampleInvertedSegment extends Component {
   };
 
   render() {
-    const { open, dimmer } = this.state;
     return (
       <div className="navbar">
         <div>
-          {/* className="ui labeled icon menu inverted navbar" */}
-          <div
-            className="ui animated button navbarLogout"
-            tabIndex="0"
-            onClick={this.props.handleLogOut}
-            id="navbarLogoutId"
-          >
-            <div className="visible content navbarLogoutText ">Logout</div>
-            <div className="hidden content">
-              <i className="hand peace icon" />
+          <Link to="/">
+            <div
+              className="ui animated button navbarLogout"
+              tabIndex="0"
+              onClick={this.props.handleLogOut}
+              id="navbarLogoutId"
+            >
+              <div className="visible content navbarLogoutText ">Logout</div>
+              <div className="hidden content">
+                <i className="hand peace icon" />
+              </div>
             </div>
-          </div>
+          </Link>
 
           <img src={Logo} alt="logo" />
-
-          {/* <Button onClick={this.show("blurring")}>Preference</Button>
-
-          <Modal dimmer={dimmer} open={open} onClose={this.close}>
-            <Modal.Header>Preference</Modal.Header>
-            <Modal.Content>
-              <YoutubeMenu updateYoutubeMenu={this.updateYoutubeMenu} />
-              <input />
-              <TwitterMenu updateTwitterMenu={this.updateTwitterMenu} />
-              <input />
-            </Modal.Content>
-            <Modal.Actions>
-              <Button color="black" onClick={this.close}>
-                Close
-              </Button>
-              <Button
-                positive
-                icon="checkmark"
-                labelPosition="right"
-                content="Set"
-                onClick={this.close}
-              />
-            </Modal.Actions>
-          </Modal> */}
         </div>
       </div>
     );

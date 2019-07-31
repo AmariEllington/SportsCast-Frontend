@@ -1,30 +1,36 @@
 import React, { Component } from "react";
-import YouTube from "react-youtube";
+import ReactPlayer from "react-player";
+import YoutubeMenu from "../Components/YoutubeMenu";
 
-export default class Youtube extends Component {
+export default class Youtube3 extends Component {
+  state = {
+    url: `https://www.youtube.com/playlist?list=UUtK4QAczAN2mt2ow_jlGinQ`
+  };
+
+  updateYoutubeMenu = event => {
+    this.setState({
+      url: event.target.value
+    });
+  };
   render() {
-    const opts = {
-      // height: "390",
-      // width: "640",
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 0
-      }
-    };
-
     return (
-      <div className="card-item">
-        <YouTube
-          videoId="PL5-QUghxmluLMkbbPv2xW8jGkgyXam1nP"
-          opts={opts}
-          onReady={this._onReady}
-        />
+      <div className="youtubeDiv card-item">
+        <div className="youtubeMenuDiv">
+          <YoutubeMenu
+            updateYoutubeMenu={this.updateYoutubeMenu}
+            pages={this.props.pages}
+          />
+        </div>
+
+        <div className="youtubeInnerDiv">
+          <ReactPlayer
+            url={this.state.url}
+            className="youtubeReactPlayer"
+            height="40vh"
+            width="60vw"
+          />
+        </div>
       </div>
     );
-  }
-
-  _onReady(event) {
-    // access to player in all event handlers via event.target
-    event.target.pauseVideo();
   }
 }

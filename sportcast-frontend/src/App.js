@@ -11,7 +11,7 @@ import LandingPage from "./Pages/LandingPage";
 import { DragDropContext } from "react-beautiful-dnd";
 
 const baseUrl = "http://localhost:3001";
-const URL = `http://localhost:3001/pages/`;
+const PAGESURL = `http://localhost:3001/pages/`;
 
 export default class App extends Component {
   state = {
@@ -25,17 +25,16 @@ export default class App extends Component {
   componentDidMount() {
     const token = localStorage.getItem("token");
     if (token) {
-      api.getCurrentUser(token).then(user => {
+      api.getCurrentUser(token).then(data => {
         this.setState({
           logged_in: true,
-          username: user.username,
-          user: user
+          username: data,
+          user: data.user
         });
-        console.log(user);
       });
     }
 
-    fetch(URL)
+    fetch(PAGESURL)
       .then(resp => resp.json())
       .then(resp =>
         this.setState({
@@ -58,7 +57,7 @@ export default class App extends Component {
         this.setState({ username: "", password: "" });
       } else {
         localStorage.setItem("token", data.jwt);
-        this.setState({ logged_in: true, username: data.username });
+        this.setState({ logged_in: true, user: data });
       }
     });
   };

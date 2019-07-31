@@ -184,14 +184,6 @@ body {
 
 /* ------------ login form  ------------- */
 
-.loginPage {
-  display: inline-block;
-}
-
-.backToHomeButton {
-  width: 100%;
-}
-
 .logInForm {
   text-align: center;
   margin: 0 auto;

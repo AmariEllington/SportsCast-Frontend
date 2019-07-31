@@ -3,9 +3,8 @@ import ReactDOM from "react-dom";
 
 import NewsFeed from "../Containers/NewsFeed";
 import Twitter from "../Containers/Twitter";
-import Youtube2 from "../Containers/Youtube2";
+
 import Youtube from "../Containers/Youtube";
-import Youtube3 from "../Containers/Youtube3";
 import Spotify from "../Containers/Spotify";
 import MenuAppBar from "../Containers/MenuAppBar";
 import SportTicker from "../Containers/SportTicker";
@@ -36,7 +35,7 @@ export default class ContentPage extends Component {
 
         <div className="ui grid contentOuterDiv ">
           <div className="ten wide column row card contentInnerCard">
-            <Youtube3
+            <Youtube
               pages={this.state.pages}
               user={this.props.user}
               userYoutube={this.props.userYoutube}

@@ -5,12 +5,13 @@ import TwitterMenu from "../Components/TwitterMenu";
 export default class Twitter extends Component {
   componentDidMount() {}
 
-  handleClick = event => {
-    event.preventDefault();
-    this.setState({
-      input: event.target.formInput.value
-    });
+  handleClick = e => {
+    this.props.updateTwitter(e.target.value);
   };
+
+  // handleClick = e => {
+  //   this.props.updateYoutubeMenu(e.target.value);
+  // };
 
   updateTwitterMenu = event => {
     event.preventDefault();
@@ -19,6 +20,7 @@ export default class Twitter extends Component {
     });
   };
   render() {
+    const { userTwitter } = this.props;
     return (
       <div className="card-item">
         <div className="twitterMenuDiv">
@@ -36,9 +38,9 @@ export default class Twitter extends Component {
             <input type="submit" value="submit" />
           </form>
           <TwitterTimelineEmbed
-            key={this.state.input}
+            key={userTwitter}
             sourceType="profile"
-            screenName={this.state.input}
+            screenName={userTwitter}
             className="twitterTimeline"
           />
         </div>

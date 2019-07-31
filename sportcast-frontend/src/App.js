@@ -26,6 +26,10 @@ export default class App extends Component {
     userYoutube: ""
   };
 
+  updateYoutubeMenu = userYoutube => {
+    this.setState({ userYoutube });
+  };
+
   componentDidMount() {
     const token = localStorage.getItem("token");
     if (token) {
@@ -130,6 +134,7 @@ export default class App extends Component {
                 user={this.state.user}
                 userTwitter={this.state.userTwitter}
                 userYoutube={this.state.userYoutube}
+                updateYoutubeMenu={this.updateYoutubeMenu}
               />
             )}
           />

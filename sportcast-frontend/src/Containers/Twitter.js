@@ -3,9 +3,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 import TwitterMenu from "../Components/TwitterMenu";
 
 export default class Twitter extends Component {
-  state = {
-    input: this.props.userTwitter
-  };
+  componentDidMount() {}
 
   handleClick = event => {
     event.preventDefault();

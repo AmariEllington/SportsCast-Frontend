@@ -40,6 +40,7 @@ export default class ContentPage extends Component {
               pages={this.state.pages}
               user={this.props.user}
               userYoutube={this.props.userYoutube}
+              updateYoutubeMenu={this.props.updateYoutubeMenu}
             />
           </div>
 

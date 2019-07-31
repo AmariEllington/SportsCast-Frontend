@@ -44,7 +44,7 @@ export default class SignUp extends React.Component {
       debugger;
     });
     this.props.handleLoginUser();
-    this.props.history.push("/login");
+    this.props.history.push("/content");
     // .then(alert("User added"))
   };
 

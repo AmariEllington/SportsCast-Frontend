@@ -3,28 +3,24 @@ import ReactPlayer from "react-player";
 import YoutubeMenu from "../Components/YoutubeMenu";
 
 export default class Youtube3 extends Component {
-  state = {
-    url: this.props.user.page.youtube
+  handleClick = e => {
+    this.props.updateYoutubeMenu(e.target.value);
   };
 
-  updateYoutubeMenu = event => {
-    this.setState({
-      url: event.target.value
-    });
-  };
   render() {
+    const { userYoutube } = this.props;
     return (
       <div className="youtubeDiv card-item">
         <div className="youtubeMenuDiv">
           <YoutubeMenu
-            updateYoutubeMenu={this.updateYoutubeMenu}
+            updateYoutubeMenu={this.handleClick}
             pages={this.props.pages}
           />
         </div>
 
         <div className="youtubeInnerDiv">
           <ReactPlayer
-            url={this.state.url}
+            url={userYoutube}
             className="youtubeReactPlayer"
             height="40vh"
             width="60vw"

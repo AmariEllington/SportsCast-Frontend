@@ -30,4 +30,9 @@ export default class Youtube3 extends Component {
       </div>
     );
   }
+
+  _onReady(event) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
 }

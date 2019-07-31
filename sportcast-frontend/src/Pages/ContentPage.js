@@ -36,7 +36,7 @@ export default class ContentPage extends Component {
 
         <div className="ui grid contentOuterDiv ">
           <div className="ten wide column row card contentInnerCard">
-            <Youtube
+            <Youtube3
               pages={this.state.pages}
               user={this.props.user}
               userYoutube={this.props.userYoutube}

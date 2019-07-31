@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 
 import NewsFeed from "../Containers/NewsFeed";
 import Twitter from "../Containers/Twitter";
-
+import Youtube2 from "../Containers/Youtube2";
 import Youtube from "../Containers/Youtube";
-
-import Podcast from "../Containers/PodcastContainer";
+import Youtube3 from "../Containers/Youtube3";
+import Spotify from "../Containers/Spotify";
 import MenuAppBar from "../Containers/MenuAppBar";
 import SportTicker from "../Containers/SportTicker";
 
@@ -52,7 +52,7 @@ export default class ContentPage extends Component {
           </div>
 
           <div className="six wide column row card contentInnerCard">
-            <Podcast />
+            <Spotify />
           </div>
           <div className="ten wide column row card contentInnerCard">
             <NewsFeed />

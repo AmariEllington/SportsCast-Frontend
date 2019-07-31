@@ -3,6 +3,7 @@ import ContentPage from "../Pages/ContentPage";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import TwitterMenu from "../Components/TwitterMenu";
 import Logo from "../Components/Logo.png";
+import HomeButton from "../Components/HomeButton";
 
 const baseURL = "http://localhost:3001";
 
@@ -92,6 +93,7 @@ export default class SignUp extends React.Component {
               Submit
             </button>
           </form>
+          <HomeButton />
         </div>
       </div>
     );

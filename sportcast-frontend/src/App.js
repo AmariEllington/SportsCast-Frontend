@@ -11,7 +11,7 @@ import LandingPage from "./Pages/LandingPage";
 import { DragDropContext } from "react-beautiful-dnd";
 
 const baseUrl = "http://localhost:3001";
-const PAGESURL = `http://localhost:3001/pages/`;
+const URL = `http://localhost:3001/pages/`;
 
 export default class App extends Component {
   state = {
@@ -31,7 +31,7 @@ export default class App extends Component {
       this.handleLoginUser(token);
     }
 
-    fetch(PAGESURL)
+    fetch(URL)
       .then(resp => resp.json())
       .then(resp =>
         this.setState({

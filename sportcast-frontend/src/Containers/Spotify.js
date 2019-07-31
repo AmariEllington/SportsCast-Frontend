@@ -113,7 +113,7 @@ export default class Spotify extends Component {
 
           <div>
             {this.state.allPodcast.map((podcast, index) => (
-              <Podcast podcast={podcast} index={index} />
+              <Podcast podcast={podcast} index={index} key={index} />
             ))}
           </div>
         </div>

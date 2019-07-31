@@ -5,6 +5,7 @@ import "./App.css";
 import api from "./Services/api";
 import LoginComponent from "./Pages/LoginComponent";
 import SignUp from "./Pages/SignUp";
+import ContentPage from "./Pages/ContentPage";
 
 import LandingPage from "./Pages/LandingPage";
 
@@ -52,6 +53,7 @@ export default class App extends Component {
       });
     });
   };
+
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -100,6 +102,18 @@ export default class App extends Component {
               />
             )}
           />
+          <Route
+            exact
+            path="/content"
+            render={props => (
+              <ContentPage
+                {...props}
+                user={this.state.user}
+                username={this.state.username}
+                logginIn={this.state.loggedIn}
+              />
+            )}
+          />
 
           <Route
             exact
@@ -133,6 +147,7 @@ export default class App extends Component {
                 password={this.state.password}
                 user={this.state.user}
                 pages={this.state.pages}
+                handleLoginUser={this.handleLoginUser}
               />
             )}
           />

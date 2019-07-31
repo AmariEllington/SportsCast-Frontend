@@ -19,19 +19,16 @@ export default class App extends Component {
     username: "",
     password: "",
     pages: [],
-    user: []
+    user: [],
+    page: [],
+    userTwitter: "",
+    userYoutube: ""
   };
 
   componentDidMount() {
     const token = localStorage.getItem("token");
     if (token) {
-      api.getCurrentUser(token).then(data => {
-        this.setState({
-          logged_in: true,
-          username: data,
-          user: data.user
-        });
-      });
+      this.handleLoginUser(token);
     }
 
     fetch(PAGESURL)
@@ -43,6 +40,18 @@ export default class App extends Component {
       );
   }
 
+  handleLoginUser = token => {
+    api.getCurrentUser(token).then(user => {
+      this.setState({
+        logged_in: true,
+        username: user.username,
+        user: user,
+        page: user.page,
+        userTwitter: user.page.twitter,
+        userYoutube: user.page.youtube
+      });
+    });
+  };
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -57,7 +66,11 @@ export default class App extends Component {
         this.setState({ username: "", password: "" });
       } else {
         localStorage.setItem("token", data.jwt);
-        this.setState({ logged_in: true, user: data });
+        this.setState({
+          logged_in: true
+        });
+
+        this.handleLoginUser(data.jwt);
       }
     });
   };
@@ -101,6 +114,8 @@ export default class App extends Component {
                 handleChange={this.handleChange}
                 password={this.state.password}
                 user={this.state.user}
+                userTwitter={this.state.userTwitter}
+                userYoutube={this.state.userYoutube}
               />
             )}
           />

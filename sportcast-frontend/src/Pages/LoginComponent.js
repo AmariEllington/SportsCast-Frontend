@@ -12,6 +12,8 @@ class LoginComponent extends React.Component {
             username={this.props.username}
             loggin_In={this.props.logged_In}
             handleLogOut={this.props.handleLogOut}
+            userTwitter={this.props.userTwitter}
+            userYoutube={this.props.userYoutube}
           />
         ) : (
           <div>

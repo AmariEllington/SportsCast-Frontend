@@ -3,9 +3,12 @@ import ReactPlayer from "react-player";
 import YoutubeMenu from "../Components/YoutubeMenu";
 
 export default class Youtube3 extends Component {
-  state = {
-    url: `https://www.youtube.com/playlist?list=UUtK4QAczAN2mt2ow_jlGinQ`
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      url: props.userYoutube
+    };
+  }
 
   updateYoutubeMenu = event => {
     this.setState({
@@ -24,7 +27,7 @@ export default class Youtube3 extends Component {
 
         <div className="youtubeInnerDiv">
           <ReactPlayer
-            url={this.state.url}
+            url={this.props.userYoutube}
             className="youtubeReactPlayer"
             height="40vh"
             width="60vw"

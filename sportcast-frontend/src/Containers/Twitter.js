@@ -3,15 +3,9 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 import TwitterMenu from "../Components/TwitterMenu";
 
 export default class Twitter extends Component {
-  componentDidMount() {}
-
   handleClick = e => {
     this.props.updateTwitter(e.target.value);
   };
-
-  // handleClick = e => {
-  //   this.props.updateYoutubeMenu(e.target.value);
-  // };
 
   updateTwitterMenu = event => {
     event.preventDefault();

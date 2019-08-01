@@ -21,58 +21,6 @@ export default class SignUp extends React.Component {
     page: 0
   };
 
-  createUser = (username, password, page_id) => {
-    return fetch(baseURL + "/api/v1/users/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        username: this.state.username,
-        password: this.state.password,
-        page_id: Number(this.state.page)
-      })
-    }).then(resp => resp.json());
-  };
-
-  handleClick = e => {
-    e.preventDefault();
-    console.log("hello");
-    this.createUser().then(data => {
-      debugger;
-      return (
-        this.setState({
-          logged_in: true,
-          user: data.user
-        }),
-        console.log("user"),
-        localStorage.setItem("token", data.jwt)
-      );
-    });
-    return <Redirect to="/login" />;
-  };
-
-  // redirect = () => {
-  //   data =>
-  //   localStorage.setItem("token", data.jwt),
-  //     this.setState({
-  //       logged_in: true,
-  //       user: data.user
-  //     });
-
-  //   return <Redirect to="/content" />;
-  // };
-
-  // redirectToContent = data => {
-  //   api.getCurrentUser(data.jwt).then(
-  //     data => localStorage.setItem("token", data.jwt),
-  //     this.setState({
-  //       logged_in: true
-  //     })
-  //   );
-  //   return <ContentPage />;
-  // };
-
   handleSubmit = event => {
     event.preventDefault();
     this.createUser(
@@ -97,26 +45,26 @@ export default class SignUp extends React.Component {
             <div className="field">
               <label>Username:</label>
               <input
-                onChange={this.handleChange}
+                onChange={this.props.handleChange}
                 id="username"
                 type="text"
                 name="username"
-                value={this.state.username}
+                value={this.props.username}
               />
             </div>
             <div className="field">
               <label>Password (6-20 Characters):</label>
               <input
-                onChange={this.handleChange}
+                onChange={this.props.handleChange}
                 id="password"
                 type="password"
                 name="password"
-                value={this.state.password}
+                value={this.props.password}
               />
             </div>
             <div className="field">
               <label>Select Team:</label>
-              <select name="page" onChange={this.handleChange}>
+              <select name="page" onChange={this.props.handleChange}>
                 {this.props.pages.map((page, index) => (
                   <option
                     value={page.id}
@@ -132,7 +80,7 @@ export default class SignUp extends React.Component {
             <button
               className="ui button"
               type="submit"
-              onClick={this.handleClick}
+              onClick={this.props.handleClick}
             >
               Submit
             </button>

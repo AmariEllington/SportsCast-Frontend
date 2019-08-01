@@ -5,7 +5,8 @@ import {
   Route,
   Link,
   Switch,
-  Redirect
+  Redirect,
+  withRouter
 } from "react-router-dom";
 import "./App.css";
 import api from "./Services/api";
@@ -15,12 +16,10 @@ import ContentPage from "./Pages/ContentPage";
 
 import LandingPage from "./Pages/LandingPage";
 
-import { DragDropContext } from "react-beautiful-dnd";
-
-const baseUrl = "http://localhost:3001";
+const baseURL = "http://localhost:3001";
 const URL = `http://localhost:3001/pages/`;
 
-export default class App extends Component {
+class App extends Component {
   state = {
     logged_in: false,
     username: "",
@@ -74,6 +73,34 @@ export default class App extends Component {
     });
   };
 
+  // ---------------------------------------------
+  createUser = (username, password, page_id) => {
+    return fetch(baseURL + "/api/v1/users/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        username: this.state.username,
+        password: this.state.password,
+        page_id: Number(this.state.page)
+      })
+    }).then(resp => resp.json());
+  };
+
+  handleClick = e => {
+    e.preventDefault();
+    this.createUser().then(data => {
+      return (
+        this.handleLoginUser(data.jwt),
+        localStorage.setItem("token", data.jwt),
+        this.props.history.push("/login")
+      );
+    });
+  };
+
+  // --------------------------
+
   onLoginClicked = e => {
     e.preventDefault();
     api.login(this.state.username, this.state.password).then(data => {
@@ -96,67 +123,91 @@ export default class App extends Component {
     this.setState({
       logged_in: false,
       username: "",
-      password: ""
+      password: "",
+      pages: [],
+      user: [],
+      page: [],
+      userTwitter: "",
+      userYoutube: ""
     });
   };
 
   render() {
     return (
-      <Router>
-        <div>
-          <Route
-            exact
-            path="/"
-            render={props => (
-              <LandingPage
-                {...props}
-                user={this.state.user}
-                username={this.state.username}
-                logginIn={this.state.loggedIn}
-              />
-            )}
-          />
+      <div>
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <LandingPage
+              {...props}
+              user={this.state.user}
+              username={this.state.username}
+              logginIn={this.state.loggedIn}
+            />
+          )}
+        />
 
-          <Route
-            exact
-            path="/login"
-            render={props => (
-              <LoginComponent
-                {...props}
-                logged_in={this.state.logged_in}
-                onLoginClicked={this.onLoginClicked}
-                handleLogOut={this.handleLogOut}
-                username={this.state.username}
-                handleChange={this.handleChange}
-                password={this.state.password}
-                user={this.state.user}
-                userTwitter={this.state.userTwitter}
-                userYoutube={this.state.userYoutube}
-                updateYoutubeMenu={this.updateYoutubeMenu}
-                updateTwitterMenu={this.updateTwitterMenu}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/signup"
-            render={props => (
-              <SignUp
-                {...props}
-                logged_in={this.state.logged_in}
-                onLoginClicked={this.onLoginClicked}
-                handleLogOut={this.handleLogOut}
-                username={this.state.username}
-                handleChange={this.handleChange}
-                password={this.state.password}
-                user={this.state.user}
-                pages={this.state.pages}
-                handleLoginUser={this.handleLoginUser}
-              />
-            )}
-          />
-        </div>
-      </Router>
+        <Route
+          exact
+          path="/login"
+          render={props => (
+            <LoginComponent
+              {...props}
+              logged_in={this.state.logged_in}
+              onLoginClicked={this.onLoginClicked}
+              handleLogOut={this.handleLogOut}
+              username={this.state.username}
+              handleChange={this.handleChange}
+              password={this.state.password}
+              user={this.state.user}
+              userTwitter={this.state.userTwitter}
+              userYoutube={this.state.userYoutube}
+              updateYoutubeMenu={this.updateYoutubeMenu}
+              updateTwitterMenu={this.updateTwitterMenu}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/signup"
+          render={props => (
+            <SignUp
+              {...props}
+              logged_in={this.state.logged_in}
+              onLoginClicked={this.onLoginClicked}
+              handleLogOut={this.handleLogOut}
+              username={this.state.username}
+              handleChange={this.handleChange}
+              password={this.state.password}
+              user={this.state.user}
+              pages={this.state.pages}
+              handleLoginUser={this.handleLoginUser}
+              handleClick={this.handleClick}
+            />
+          )}
+        />
+        <Route
+          path="/content"
+          render={props => (
+            <ContentPage
+              {...props}
+              user={this.props.user}
+              username={this.props.username}
+              loggin_In={this.props.logged_In}
+              handleLogOut={this.props.handleLogOut}
+              userTwitter={this.props.userTwitter}
+              userYoutube={this.props.userYoutube}
+              updateYoutubeMenu={this.props.updateYoutubeMenu}
+              updateTwitterMenu={this.updateTwitterMenu}
+            />
+          )}
+        />
+      </div>
     );
   }
 }
+
+const RouterApp = withRouter(App);
+
+export default RouterApp;

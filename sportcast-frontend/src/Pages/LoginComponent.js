@@ -3,6 +3,7 @@ import ContentPage from "../Pages/ContentPage";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Logo from "../Components/Logo.png";
 import HomeButton from "../Components/HomeButton";
+
 class LoginComponent extends React.Component {
   render() {
     return (

@@ -13,6 +13,7 @@ import api from "./Services/api";
 import LoginComponent from "./Pages/LoginComponent";
 import SignUp from "./Pages/SignUp";
 import ContentPage from "./Pages/ContentPage";
+import Swal from "sweetalert2";
 
 import LandingPage from "./Pages/LandingPage";
 
@@ -110,7 +111,12 @@ class App extends Component {
     e.preventDefault();
     api.login(this.state.username, this.state.password).then(data => {
       if (data.error) {
-        alert("something is wrong with your credentials");
+        Swal.fire({
+          title: "Ooopss",
+          text: "something is wrong!",
+          type: "error",
+          confirmationButtonText: "okay"
+        });
         this.setState({ username: "", password: "" });
       } else {
         localStorage.setItem("token", data.jwt);

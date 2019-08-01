@@ -4,27 +4,23 @@ import TwitterMenu from "../Components/TwitterMenu";
 
 export default class Twitter extends Component {
   handleClick = e => {
-    this.props.updateTwitter(e.target.value);
+    e.preventDefault();
+    this.props.updateTwitterMenu(e);
   };
 
-  updateTwitterMenu = event => {
-    event.preventDefault();
-    this.setState({
-      input: event.target.value
-    });
-  };
   render() {
     const { userTwitter } = this.props;
+    console.log(userTwitter);
     return (
       <div className="card-item">
         <div className="twitterMenuDiv">
           <TwitterMenu
-            updateTwitterMenu={this.updateTwitterMenu}
+            updateTwitterMenu={this.props.updateTwitterMenu}
             pages={this.props.pages}
           />
 
           <form
-            onSubmit={this.handleClick}
+            onSubmit={this.props.updateTwitterSearch}
             className="ui button"
             id="buttonColour"
           >

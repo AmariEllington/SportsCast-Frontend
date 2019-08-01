@@ -35,8 +35,13 @@ class App extends Component {
     this.setState({ userYoutube });
   };
 
-  updateTwitterMenu = userTwitter => {
-    this.setState({ userTwitter });
+  updateTwitterMenu = event => {
+    this.setState({ userTwitter: event.target.value });
+  };
+
+  updateTwitterSearch = event => {
+    event.preventDefault();
+    this.setState({ userTwitter: event.target.formInput.value });
   };
 
   componentDidMount() {
@@ -124,7 +129,6 @@ class App extends Component {
       logged_in: false,
       username: "",
       password: "",
-      pages: [],
       user: [],
       page: [],
       userTwitter: "",
@@ -165,6 +169,7 @@ class App extends Component {
               userYoutube={this.state.userYoutube}
               updateYoutubeMenu={this.updateYoutubeMenu}
               updateTwitterMenu={this.updateTwitterMenu}
+              updateTwitterSearch={this.updateTwitterSearch}
             />
           )}
         />
@@ -187,7 +192,7 @@ class App extends Component {
             />
           )}
         />
-        <Route
+        {/* <Route
           path="/content"
           render={props => (
             <ContentPage
@@ -196,13 +201,13 @@ class App extends Component {
               username={this.props.username}
               loggin_In={this.props.logged_In}
               handleLogOut={this.props.handleLogOut}
-              userTwitter={this.props.userTwitter}
-              userYoutube={this.props.userYoutube}
-              updateYoutubeMenu={this.props.updateYoutubeMenu}
+              userTwitter={this.state.userTwitter}
+              userYoutube={this.state.userYoutube}
+              updateYoutubeMenu={this.updateYoutubeMenu}
               updateTwitterMenu={this.updateTwitterMenu}
             />
           )}
-        />
+        /> */}
       </div>
     );
   }

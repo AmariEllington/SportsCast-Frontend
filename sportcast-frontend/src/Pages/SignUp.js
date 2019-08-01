@@ -65,7 +65,7 @@ export default class SignUp extends React.Component {
             <div className="field">
               <label>Select Team:</label>
               <select name="page" onChange={this.props.handleChange}>
-                {this.props.pages.map((page, index) => (
+                {this.props.pages.map(page => (
                   <option
                     value={page.id}
                     className="item twitterMenuItem"

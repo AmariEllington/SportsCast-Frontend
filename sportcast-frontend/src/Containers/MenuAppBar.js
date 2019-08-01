@@ -18,18 +18,6 @@ export default class MenuExampleInvertedSegment extends Component {
 
   ////// ---- updating state ------ //////
 
-  updateYoutubeMenu = event => {
-    this.setState({
-      youtube: event.target.value
-    });
-  };
-
-  updateTwitterMenu = event => {
-    this.setState({
-      twitter: event.target.value
-    });
-  };
-
   render() {
     const { open, dimmer } = this.state;
     return (
@@ -47,32 +35,7 @@ export default class MenuExampleInvertedSegment extends Component {
               <i className="hand peace icon" />
             </div>
           </div>
-
           <img src={Logo} alt="logo" />
-
-          {/* <Button onClick={this.show("blurring")}>Preference</Button>
-
-          <Modal dimmer={dimmer} open={open} onClose={this.close}>
-            <Modal.Header>Preference</Modal.Header>
-            <Modal.Content>
-              <YoutubeMenu updateYoutubeMenu={this.updateYoutubeMenu} />
-              <input />
-              <TwitterMenu updateTwitterMenu={this.updateTwitterMenu} />
-              <input />
-            </Modal.Content>
-            <Modal.Actions>
-              <Button color="black" onClick={this.close}>
-                Close
-              </Button>
-              <Button
-                positive
-                icon="checkmark"
-                labelPosition="right"
-                content="Set"
-                onClick={this.close}
-              />
-            </Modal.Actions>
-          </Modal> */}
         </div>
       </div>
     );

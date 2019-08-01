@@ -16,7 +16,8 @@ class LoginComponent extends React.Component {
             userTwitter={this.props.userTwitter}
             userYoutube={this.props.userYoutube}
             updateYoutubeMenu={this.props.updateYoutubeMenu}
-            updateTwitterMenu={this.updateTwitterMenu}
+            updateTwitterMenu={this.props.updateTwitterMenu}
+            updateTwitterSearch={this.props.updateTwitterSearch}
           />
         ) : (
           <div className="loginPage">

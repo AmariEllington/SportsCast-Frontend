@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactPlayer from "react-player";
 import YoutubeMenu from "../Components/YoutubeMenu";
 
-export default class Youtube3 extends Component {
+export default class Youtube extends Component {
   handleClick = e => {
     this.props.updateYoutubeMenu(e.target.value);
   };

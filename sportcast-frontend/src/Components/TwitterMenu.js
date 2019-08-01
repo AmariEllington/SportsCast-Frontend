@@ -14,16 +14,18 @@ export default class TwitterMenu extends Component {
           </div>
           <i className="dropdown icon" />
           <div className="menu">
-            {this.props.pages.map(page => (
-              <option
-                value={page.twitter}
-                className="item twitterMenuItem"
-                onClick={this.props.updateTwitterMenu}
-                key={page.id}
-              >
-                {page.name}
-              </option>
-            ))}
+            {this.props.pages.map(page => {
+              return (
+                <option
+                  value={page.twitter}
+                  className="item twitterMenuItem"
+                  onClick={this.props.updateTwitterMenu}
+                  key={page.id}
+                >
+                  {page.name}
+                </option>
+              );
+            })}
           </div>
         </div>
       </div>

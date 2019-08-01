@@ -48,7 +48,8 @@ export default class ContentPage extends Component {
               pages={this.state.pages}
               user={this.props.user}
               userTwitter={this.props.userTwitter}
-              updateTwitterMenu={this.updateTwitterMenu}
+              updateTwitterMenu={this.props.updateTwitterMenu}
+              updateTwitterSearch={this.props.updateTwitterSearch}
             />
           </div>
 

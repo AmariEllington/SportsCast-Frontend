@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Podcast from "../Components/Podcast";
 
 const URL = `http://localhost:3001/podcast_group/`;
-export default class Spotify extends Component {
+export default class PodcastContainer extends Component {
   state = {
     podcast: "football",
     allPodcast: []

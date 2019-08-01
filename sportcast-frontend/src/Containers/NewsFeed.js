@@ -113,7 +113,7 @@ export default class NewsFeed extends Component {
 
     return (
       <div className="card-item">
-        <div className="ui buttons">
+        <div className="ui buttons ">
           <button
             className="ui button"
             id="buttonColour"

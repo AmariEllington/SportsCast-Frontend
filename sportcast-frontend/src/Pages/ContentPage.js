@@ -5,7 +5,7 @@ import NewsFeed from "../Containers/NewsFeed";
 import Twitter from "../Containers/Twitter";
 
 import Youtube from "../Containers/Youtube";
-import Spotify from "../Containers/Spotify";
+import PodcastContainer from "../Containers/PodcastContainer";
 import MenuAppBar from "../Containers/MenuAppBar";
 import SportTicker from "../Containers/SportTicker";
 
@@ -53,7 +53,7 @@ export default class ContentPage extends Component {
           </div>
 
           <div className="six wide column row card contentInnerCard">
-            <Spotify />
+            <PodcastContainer />
           </div>
           <div className="ten wide column row card contentInnerCard">
             <NewsFeed />

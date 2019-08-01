@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import "./App.css";
 import api from "./Services/api";
 import LoginComponent from "./Pages/LoginComponent";
@@ -103,18 +109,6 @@ export default class App extends Component {
             path="/"
             render={props => (
               <LandingPage
-                {...props}
-                user={this.state.user}
-                username={this.state.username}
-                logginIn={this.state.loggedIn}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/content"
-            render={props => (
-              <ContentPage
                 {...props}
                 user={this.state.user}
                 username={this.state.username}

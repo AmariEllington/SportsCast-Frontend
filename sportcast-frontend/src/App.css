@@ -2,52 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .appContainer {
   min-height: 100%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.grid2x2 > div {
-  display: flex;
-  flex-basis: calc(50% - 40px);
-  justify-content: center;
-  flex-direction: column;
-}
-.grid2x2 > div > div {
-  display: flex;
-  justify-content: center;
   flex-direction: row;
 }
 
@@ -57,15 +15,22 @@ body {
   margin: 0;
 }
 
-.contentDiv {
-}
-
 .navbar img {
   width: 15vw;
   height: 5vh;
   float: left;
   border: 2px solid black;
 }
+
+/* --------- buttons ----------- */
+#buttonColour {
+  background: rgb(7, 251, 139);
+  border: 1px solid black;
+}
+
+/* -------------------------------- */
+
+/* ----------- cards -------------- */
 
 .card {
   height: 45vh;
@@ -87,6 +52,10 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* --------------------------------- */
+
+/* --------------- news feed -------- */
+
 .newsCard img {
   object-fit: cover;
   width: 50%;
@@ -106,11 +75,6 @@ body {
   height: 5vh;
 }
 
-#buttonColour {
-  background: rgb(7, 251, 139);
-  border: 1px solid black;
-}
-
 .newsCard {
   overflow: auto;
   width: 100%;
@@ -124,9 +88,10 @@ body {
   float: right;
   margin-right: 12%;
 }
-.menuTitle {
-  justify-content: center;
-}
+
+/* ------------------------------- */
+
+/* ------- Sports Ticker -------------- */
 
 .sportsTicker {
   width: 100%;
@@ -136,6 +101,8 @@ body {
 .sportsTickerDiv {
   position: relative;
 }
+
+/* -------------------------------------- */
 /*  ---------- landing page ------------ */
 .landingPage {
   background-color: #ffffff;
@@ -188,6 +155,11 @@ body {
   display: inline-block;
 }
 
+#signuplogo {
+  width: 100vw;
+  height: 20vw;
+}
+
 .backToHomeButton {
   width: 100%;
 }
@@ -216,6 +188,8 @@ body {
   overflow: auto;
 }
 
+/* -------- nav  bar ------------ */
+
 .menuAppBar {
   display: block;
   width: 100vw;
@@ -239,17 +213,20 @@ body {
 
 #navbarLogoutId {
   background-color: rgb(7, 251, 139);
-}
-
-#signuplogo {
-  width: 100vw;
-  height: 20vw;
+  margin-right: 1vw;
 }
 
 .navbarLogoutText {
   margin: 0 auto;
   padding-top: 15%;
+  font-weight: bold;
+  padding-bottom: 5vh;
+  font-size: large;
 }
+
+/* ------------------------------------ */
+
+/* ---------- content -------------- */
 
 .contentOuterDiv {
   display: flex;
@@ -265,6 +242,10 @@ body {
   justify-content: center;
 }
 
+/* -------------------------------- */
+
+/* ----------------Twitter ---------------- */
+
 .timelineTweet {
   order: 0;
   flex: 1 1 auto;
@@ -274,14 +255,6 @@ body {
   overflow: auto;
 }
 
-.podcastMenu {
-  overflow: auto;
-  width: 100%;
-  display: block;
-}
-.twitterMenuDiv {
-}
-
 .twitterMenuDiv form {
   float: right;
 }
@@ -289,7 +262,28 @@ body {
 .twitterMenu {
   float: left;
 }
+.twitterMenuItem {
+  overflow: auto;
+}
 
+/* ----------------------------------- */
+
+/* -------------- Podcast ------------- */
+
+.podcastMenu {
+  overflow: auto;
+  width: 100%;
+  display: block;
+}
+
+.podcast {
+  height: 27vh;
+  width: 100%;
+}
+
+/* ---------------------------------- */
+
+/* ----------- Youtube ------------------ */
 .youtubeDiv {
   order: 0;
   flex: 2 1 auto;
@@ -304,60 +298,7 @@ body {
 
 .youtubeMenu {
   float: left;
+  margin-bottom: 6px;
 }
 
-.podcast {
-  height: 27vh;
-  width: 100%;
-}
-
-.spotifyInnerDiv {
-  display: inline-block;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-
-/* .newsfeed {
-  order: 0;
-  flex: 2 1 auto;
-  align-self: flex-start;
-  display: block;
-  height: 60vh;
-  overflow: auto;
-} */
-
-.search-bar {
-  margin: 20px;
-  text-align: center;
-}
-
-.search-bar input {
-  width: 75%;
-}
-
-.video-item img {
-  max-width: 64px;
-}
-
-.video-detail .details {
-  margin-top: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.list-group-item {
-  cursor: pointer;
-}
-
-.list-group-item:hover {
-  background-color: #eee;
-}
-
-.twitterMenuItem {
-  overflow: auto;
-}
+/* --------------------------------------- */

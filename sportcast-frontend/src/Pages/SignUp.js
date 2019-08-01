@@ -1,6 +1,12 @@
 import React from "react";
 import ContentPage from "../Pages/ContentPage";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import TwitterMenu from "../Components/TwitterMenu";
 import Logo from "../Components/Logo.png";
 import HomeButton from "../Components/HomeButton";
@@ -15,8 +21,7 @@ export default class SignUp extends React.Component {
     page: 0
   };
 
-  createUser = (event, username, password, page_id) => {
-    event.preventDefault();
+  createUser = (username, password, page_id) => {
     return fetch(baseURL + "/api/v1/users/signup", {
       method: "POST",
       headers: {
@@ -27,12 +32,46 @@ export default class SignUp extends React.Component {
         password: this.state.password,
         page_id: Number(this.state.page)
       })
-    })
-      .then(resp => resp.json())
-      .then(data => {
-        this.props.handleLoginUser(data.jwt);
-      });
+    }).then(resp => resp.json());
   };
+
+  handleClick = e => {
+    e.preventDefault();
+    console.log("hello");
+    this.createUser().then(data => {
+      debugger;
+      return (
+        this.setState({
+          logged_in: true,
+          user: data.user
+        }),
+        console.log("user"),
+        localStorage.setItem("token", data.jwt)
+      );
+    });
+    return <Redirect to="/login" />;
+  };
+
+  // redirect = () => {
+  //   data =>
+  //   localStorage.setItem("token", data.jwt),
+  //     this.setState({
+  //       logged_in: true,
+  //       user: data.user
+  //     });
+
+  //   return <Redirect to="/content" />;
+  // };
+
+  // redirectToContent = data => {
+  //   api.getCurrentUser(data.jwt).then(
+  //     data => localStorage.setItem("token", data.jwt),
+  //     this.setState({
+  //       logged_in: true
+  //     })
+  //   );
+  //   return <ContentPage />;
+  // };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -93,7 +132,7 @@ export default class SignUp extends React.Component {
             <button
               className="ui button"
               type="submit"
-              onClick={this.createUser}
+              onClick={this.handleClick}
             >
               Submit
             </button>
